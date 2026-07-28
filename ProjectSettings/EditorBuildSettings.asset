@@ -6,7 +6,46 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
+    path: Assets/Scenes/Main.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
+  - enabled: 1
+    path: Assets/Scenes/LevelMenu.unity
+    guid: a354481477d6d9c459e106bc65ed639f
+  - enabled: 1
+    path: Assets/Scenes/Level0_Fire_Interior.unity
+    guid: f9408597856dc244ca3474a56e1e0236
+  - enabled: 1
+    path: Assets/Scenes/Level1_Fire.unity
+    guid: 00773efb78da2804a9df12728cc54415
+  - enabled: 1
+    path: Assets/Scenes/Level2_Earthquake_Interior.unity
+    guid: 1d939442abb2f4f4a97cfa4a2fc92e1a
+  - enabled: 1
+    path: Assets/Scenes/Level3_Earthquake.unity
+    guid: e07bd2b2c38567942951d9f35e7fd38e
+  - enabled: 1
+    path: Assets/Scenes/Level4_Typhoon_In.unity
+    guid: 27e8bd8f85541da45bdf14921124eba6
+  - enabled: 1
+    path: Assets/Scenes/Level5_Typhoon.unity
+    guid: 1d15779694d9223479132098b2b4ff0c
+  - enabled: 1
+    path: Assets/Scenes/Level6_Flood_In.unity
+    guid: eddc1ba02c02c114c8a148b81872a410
+  - enabled: 1
+    path: Assets/Scenes/Level7_Flood.unity
+    guid: e1e934683b164954c84ee888872be119
+  - enabled: 1
+    path: Assets/Scenes/Inventory.unity
+    guid: 4235c951aaa0fbc4084fbc37352c43b2
+  - enabled: 1
+    path: Assets/Scenes/Settings.unity
+    guid: d24430e1991ed424d9c0e156738cfa01
+  - enabled: 0
+    path: Assets/Scenes/Level4_Flood.unity
+    guid: 378e21b326305ca479c9d17bf6254f4a
+  - enabled: 0
+    path: Assets/Scenes/LoadingScreen1.unity
+    guid: 3eedd8a1dbf0eaf4ba77fdc5340c092b
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}

@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] private float moveSpeed = 5f;
 
+    // Keyboard/Gamepad input
     private Vector2 moveInput;
 
     private void Awake()
@@ -18,7 +19,7 @@ public class PlayerController : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
-    // Called by the Player Input component (Send Messages mode)
+    // Called by the Player Input component (Keyboard/Gamepad)
     public void OnMove(InputValue value)
     {
         moveInput = value.Get<Vector2>();
@@ -26,6 +27,21 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
+        // Mobile Controls
+        if (MobileButton.MoveLeft)
+        {
+            moveInput = Vector2.left;
+        }
+        else if (MobileButton.MoveRight)
+        {
+            moveInput = Vector2.right;
+        }
+        else
+        {
+            // Stop moving when no mobile button is pressed
+            moveInput = Vector2.zero;
+        }
+
         HandleAnimation();
     }
 
@@ -38,7 +54,7 @@ public class PlayerController : MonoBehaviour
     {
         rb.linearVelocity = moveInput * moveSpeed;
 
-        // Flip sprite based on movement direction
+        // Flip sprite
         if (moveInput.x > 0)
         {
             spriteRenderer.flipX = false;
