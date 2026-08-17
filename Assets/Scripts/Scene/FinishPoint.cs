@@ -9,7 +9,15 @@ public class FinishPoint : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             Debug.Log("Player reached finish point!");
-            SceneContoller.instance.LoadNextLevel();
+
+            // Save that Level 1 has been completed
+            PlayerPrefs.SetInt("Level1Completed", 1);
+            PlayerPrefs.Save();
+
+            Debug.Log("Level 1 completed! Level 2 unlocked.");
+
+            // Continue to the next scene
+            SceneController.instance.LoadNextLevel();
         }
     }
 }

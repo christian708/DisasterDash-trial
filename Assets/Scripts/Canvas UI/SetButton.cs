@@ -9,9 +9,9 @@ public class SetButton : MonoBehaviour
         Debug.Log("Settings opened");
 
         // If you have a Settings Scene:
-        if (SceneContoller.instance != null)
+        if (SceneController.instance != null)
         {
-            SceneContoller.instance.LoadScene("Settings");
+            SceneController.instance.LoadScene("Settings");
         }
     }
 }

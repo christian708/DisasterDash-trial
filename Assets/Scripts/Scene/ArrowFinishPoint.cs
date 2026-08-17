@@ -9,7 +9,7 @@ public class ArrowFinishPoint : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            SceneContoller.instance.LoadScene(targetScene);
+            SceneController.instance.LoadScene(targetScene);
         }
     }
 }

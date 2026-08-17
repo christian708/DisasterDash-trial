@@ -6,13 +6,13 @@ public class HomeButton : MonoBehaviour
     {
         Time.timeScale = 1f;
 
-        if (SceneContoller.instance != null)
+        if (SceneController.instance != null)
         {
-            SceneContoller.instance.GoToHome();
+            SceneController.instance.GoToHome();
         }
         else
         {
-            Debug.LogWarning("SceneContoller instance not found!");
+            Debug.LogWarning("SceneController instance not found!");
         }
     }
 }

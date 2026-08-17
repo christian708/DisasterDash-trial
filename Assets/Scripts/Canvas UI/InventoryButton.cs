@@ -6,13 +6,13 @@ public class InventoryButton : MonoBehaviour
     {
         Time.timeScale = 1f;
 
-        if (SceneContoller.instance != null)
+        if (SceneController.instance != null)
         {
-            SceneContoller.instance.LoadScene("Inventory");
+            SceneController.instance.LoadScene("Inventory");
         }
         else
         {
-            Debug.LogWarning("SceneContoller instance not found!");
+            Debug.LogWarning("SceneController instance not found!");
         }
     }
 }

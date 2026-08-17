@@ -1,0 +1,520 @@
+fileFormatVersion: 2
+guid: 837662ff1f8c7f54dace507ad33bc50b
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2844473716112920603
+    second: BOYASSETS_0
+  - first:
+      213: 8841422181749539812
+    second: BOYASSETS_1
+  - first:
+      213: -7002296336172507440
+    second: BOYASSETS_2
+  - first:
+      213: 2806408214575046183
+    second: BOYASSETS_3
+  - first:
+      213: 6777049567999272368
+    second: BOYASSETS_4
+  - first:
+      213: -3979974137703815369
+    second: BOYASSETS_5
+  - first:
+      213: 2998948053672127054
+    second: BOYASSETS_6
+  - first:
+      213: 7612581044121181434
+    second: BOYASSETS_7
+  - first:
+      213: 1603203305797463035
+    second: BOYASSETS_8
+  - first:
+      213: -3209862503770712798
+    second: BOYASSETS_9
+  - first:
+      213: 2397495935622142879
+    second: BOYASSETS_10
+  - first:
+      213: 2177475127133834368
+    second: BOYASSETS_11
+  - first:
+      213: 634544052165800126
+    second: BOYASSETS_12
+  - first:
+      213: 997193286566912792
+    second: BOYASSETS_13
+  - first:
+      213: -3465337710086737917
+    second: BOYASSETS_14
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: BOYASSETS_0
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 581
+        width: 124
+        height: 206
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1098dd26c9997720800000000000000
+      internalID: 2844473716112920603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOYASSETS_1
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 581
+        width: 125
+        height: 206
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e3c07461aa03ba70800000000000000
+      internalID: 8841422181749539812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOYASSETS_2
+      rect:
+        serializedVersion: 2
+        x: 490
+        y: 581
+        width: 125
+        height: 206
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0de1b6ef498d2de90800000000000000
+      internalID: -7002296336172507440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOYASSETS_3
+      rect:
+        serializedVersion: 2
+        x: 657
+        y: 581
+        width: 125
+        height: 206
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72edb74f66d52f620800000000000000
+      internalID: 2806408214575046183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOYASSETS_4
+      rect:
+        serializedVersion: 2
+        x: 1063
+        y: 566
+        width: 146
+        height: 214
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b5afcdfcaaec0e50800000000000000
+      internalID: 6777049567999272368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOYASSETS_5
+      rect:
+        serializedVersion: 2
+        x: 1236
+        y: 565
+        width: 153
+        height: 215
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7372ceacb9a44c8c0800000000000000
+      internalID: -3979974137703815369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOYASSETS_6
+      rect:
+        serializedVersion: 2
+        x: 1417
+        y: 566
+        width: 146
+        height: 214
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4ae9fe9d576e9920800000000000000
+      internalID: 2998948053672127054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOYASSETS_7
+      rect:
+        serializedVersion: 2
+        x: 1590
+        y: 576
+        width: 148
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: afc17be502255a960800000000000000
+      internalID: 7612581044121181434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOYASSETS_8
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 334
+        width: 128
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bfb2ac899e8bf3610800000000000000
+      internalID: 1603203305797463035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOYASSETS_9
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 333
+        width: 130
+        height: 211
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22596e43f074473d0800000000000000
+      internalID: -3209862503770712798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOYASSETS_10
+      rect:
+        serializedVersion: 2
+        x: 489
+        y: 334
+        width: 129
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9b5339d9dd954120800000000000000
+      internalID: 2397495935622142879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOYASSETS_11
+      rect:
+        serializedVersion: 2
+        x: 1056
+        y: 307
+        width: 152
+        height: 216
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08c8f046712f73e10800000000000000
+      internalID: 2177475127133834368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOYASSETS_12
+      rect:
+        serializedVersion: 2
+        x: 1234
+        y: 307
+        width: 152
+        height: 216
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb0fda7147a5ec800800000000000000
+      internalID: 634544052165800126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOYASSETS_13
+      rect:
+        serializedVersion: 2
+        x: 1409
+        y: 307
+        width: 152
+        height: 216
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 813a932c20eb6dd00800000000000000
+      internalID: 997193286566912792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BOYASSETS_14
+      rect:
+        serializedVersion: 2
+        x: 1594
+        y: 318
+        width: 143
+        height: 213
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 300b38b76b5a8efc0800000000000000
+      internalID: -3465337710086737917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      BOYASSETS_0: 2844473716112920603
+      BOYASSETS_1: 8841422181749539812
+      BOYASSETS_10: 2397495935622142879
+      BOYASSETS_11: 2177475127133834368
+      BOYASSETS_12: 634544052165800126
+      BOYASSETS_13: 997193286566912792
+      BOYASSETS_14: -3465337710086737917
+      BOYASSETS_2: -7002296336172507440
+      BOYASSETS_3: 2806408214575046183
+      BOYASSETS_4: 6777049567999272368
+      BOYASSETS_5: -3979974137703815369
+      BOYASSETS_6: 2998948053672127054
+      BOYASSETS_7: 7612581044121181434
+      BOYASSETS_8: 1603203305797463035
+      BOYASSETS_9: -3209862503770712798
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

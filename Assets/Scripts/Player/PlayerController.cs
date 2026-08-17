@@ -9,17 +9,45 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] private float moveSpeed = 5f;
 
-    // Keyboard/Gamepad input
     private Vector2 moveInput;
+
+    private bool wasUsingMobileControls = false;
 
     private void Awake()
     {
-        animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
-        spriteRenderer = GetComponent<SpriteRenderer>();
+
+        FindActiveCharacter();
     }
 
-    // Called by the Player Input component (Keyboard/Gamepad)
+    private void FindActiveCharacter()
+    {
+        Animator[] animators = GetComponentsInChildren<Animator>(true);
+        SpriteRenderer[] sprites = GetComponentsInChildren<SpriteRenderer>(true);
+
+        animator = null;
+        spriteRenderer = null;
+
+        foreach (Animator a in animators)
+        {
+            if (a.gameObject.activeInHierarchy)
+            {
+                animator = a;
+                break;
+            }
+        }
+
+        foreach (SpriteRenderer s in sprites)
+        {
+            if (s.gameObject.activeInHierarchy)
+            {
+                spriteRenderer = s;
+                break;
+            }
+        }
+    }
+
+    // Keyboard / Player Input
     public void OnMove(InputValue value)
     {
         moveInput = value.Get<Vector2>();
@@ -27,19 +55,31 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
-        // Mobile Controls
+        if (animator == null || !animator.gameObject.activeInHierarchy)
+        {
+            FindActiveCharacter();
+        }
+
+        // MOBILE CONTROLS
+        bool mobileMoving =
+            MobileButton.MoveLeft ||
+            MobileButton.MoveRight;
+
         if (MobileButton.MoveLeft)
         {
             moveInput = Vector2.left;
+            wasUsingMobileControls = true;
         }
         else if (MobileButton.MoveRight)
         {
             moveInput = Vector2.right;
+            wasUsingMobileControls = true;
         }
-        else
+        else if (wasUsingMobileControls)
         {
-            // Stop moving when no mobile button is pressed
+            // Mobile button was released
             moveInput = Vector2.zero;
+            wasUsingMobileControls = false;
         }
 
         HandleAnimation();
@@ -54,20 +94,26 @@ public class PlayerController : MonoBehaviour
     {
         rb.linearVelocity = moveInput * moveSpeed;
 
-        // Flip sprite
-        if (moveInput.x > 0)
+        if (spriteRenderer != null)
         {
-            spriteRenderer.flipX = false;
-        }
-        else if (moveInput.x < 0)
-        {
-            spriteRenderer.flipX = true;
+            if (moveInput.x > 0)
+            {
+                spriteRenderer.flipX = false;
+            }
+            else if (moveInput.x < 0)
+            {
+                spriteRenderer.flipX = true;
+            }
         }
     }
 
     private void HandleAnimation()
     {
+        if (animator == null)
+            return;
+
         bool isMoving = moveInput.sqrMagnitude > 0.01f;
+
         animator.SetBool("IsRunning", isMoving);
     }
 }
