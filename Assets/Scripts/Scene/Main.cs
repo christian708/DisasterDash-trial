@@ -5,6 +5,6 @@ public class Main : MonoBehaviour
 {
     public void PlayGame()
     {
-        SceneManager.LoadScene("Main");
+        SceneManager.LoadScene("Charac_Select");
     }
 }
