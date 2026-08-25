@@ -221,6 +221,39 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 7687945370001143341, guid: 4c8be19e368ddda4eaa3370b2b72667c, type: 3}
   m_PrefabInstance: {fileID: 14360186}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &14360188 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4652403159404386217, guid: 4c8be19e368ddda4eaa3370b2b72667c, type: 3}
+  m_PrefabInstance: {fileID: 14360186}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+--- !u!114 &14360189 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2295353886113540610, guid: 4c8be19e368ddda4eaa3370b2b72667c, type: 3}
+  m_PrefabInstance: {fileID: 14360186}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+--- !u!114 &14360190 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2260931210896638361, guid: 4c8be19e368ddda4eaa3370b2b72667c, type: 3}
+  m_PrefabInstance: {fileID: 14360186}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
 --- !u!1 &60966471
 GameObject:
   m_ObjectHideFlags: 0
@@ -235,6 +268,7 @@ GameObject:
   - component: {fileID: 60966473}
   - component: {fileID: 60966472}
   - component: {fileID: 60966479}
+  - component: {fileID: 60966480}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -333,7 +367,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: -0.3}
+  m_Offset: {x: 0, y: -0.3427788}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -343,7 +377,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.8, y: 1.2}
+  m_Size: {x: 0.8, y: 1.2855575}
   m_EdgeRadius: 0
 --- !u!114 &60966475
 MonoBehaviour:
@@ -389,6 +423,32 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerCharacter
   boyVisual: {fileID: 173956822}
   girlVisual: {fileID: 1450099556}
+--- !u!114 &60966480
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 60966471}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d31c4bb27ad50e647a2523735ad3550d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerHealth
+  hearts:
+  - {fileID: 14360190}
+  - {fileID: 14360189}
+  - {fileID: 14360188}
+  fullHeartSprite: {fileID: -5115014299929153556, guid: 9ba57d706384c114aab6df5b31044a92, type: 3}
+  emptyHeartSprite: {fileID: -3586415425791623395, guid: cfd2686e1117b2745bebfa454e172082, type: 3}
+  maxHearts: 3
+  invincibilityTime: 1
+  damageFlashColor: {r: 1, g: 0, b: 0, a: 1}
+  flashCount: 3
+  flashDuration: 0.08
+  shakeMagnitude: 0.08
+  shakeDuration: 0.25
+  knockbackForce: 3
 --- !u!1 &91250901
 GameObject:
   m_ObjectHideFlags: 0
@@ -756,8 +816,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1190889624}
   - component: {fileID: 1190889623}
+  - component: {fileID: 1190889625}
   m_Layer: 0
-  m_Name: livRoom_0
+  m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -837,6 +898,52 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1190889625
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1190889622}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: -3.8070393}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 17.74, y: 8.87}
+    newSize: {x: 17.74, y: 8.87}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 17.74, y: 1.2559223}
+  m_EdgeRadius: 0
 --- !u!1 &1450099556
 GameObject:
   m_ObjectHideFlags: 0
@@ -945,7 +1052,7 @@ Transform:
   m_GameObject: {fileID: 1450099556}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.0973, y: 0.159, z: 0}
+  m_LocalPosition: {x: -0.082, y: 0.12, z: 0}
   m_LocalScale: {x: 0.8848, y: 0.8763, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1115,6 +1222,7 @@ GameObject:
   - component: {fileID: 2011663611}
   - component: {fileID: 2011663610}
   - component: {fileID: 2011663613}
+  - component: {fileID: 2011663614}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1139,8 +1247,8 @@ Camera:
   m_GameObject: {fileID: 2011663609}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -1240,6 +1348,25 @@ MonoBehaviour:
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
   m_Version: 2
+--- !u!114 &2011663614
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2011663609}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33b54c1ea9339904f9dfe3821e67f472, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CameraFollow
+  target: {fileID: 60966478}
+  smoothSpeed: 5
+  offset: {x: 0, y: 2}
+  background: {fileID: 1190889623}
+  fitWidth: 1
+  manualHalfWidth: 5.7
+  clampToBackground: 1
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
