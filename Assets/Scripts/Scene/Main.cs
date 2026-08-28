@@ -5,6 +5,6 @@ public class Main : MonoBehaviour
 {
     public void PlayGame()
     {
-        SceneManager.LoadScene("Charac_Select");
+        SceneManager.LoadScene("LevelSelect_Continue");
     }
 }
