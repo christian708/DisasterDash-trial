@@ -107,7 +107,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private void HandleAnimation()
+        private void HandleAnimation()
     {
         if (animator == null)
             return;
@@ -115,5 +115,11 @@ public class PlayerController : MonoBehaviour
         bool isMoving = moveInput.sqrMagnitude > 0.01f;
 
         animator.SetBool("IsRunning", isMoving);
+
+        // TEMP DEBUG - remove once confirmed
+        if (isMoving)
+        {
+            Debug.Log($"[PlayerController] Setting IsRunning=true on animator: {animator.gameObject.name}");
+        }
     }
 }
