@@ -28,6 +28,12 @@ public class MainMenuManager : MonoBehaviour
         // Reset PlayerPrefs progress flags (level unlocks, completion, etc.)
         ResetProgressPlayerPrefs();
 
+        // Reset inventory - all items back to locked/greyed-out
+        if (InventoryManager.Instance != null)
+        {
+            InventoryManager.Instance.ResetInventory();
+        }
+
         Debug.Log("Level1Completed after reset: " + PlayerPrefs.GetInt("Level1Completed", 0));
 
         SceneManager.LoadScene(characterSelectScene);

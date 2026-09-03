@@ -1,0 +1,76 @@
+{
+    "items": [
+        {
+            "itemId": "fire_extinguisher",
+            "itemName": "Fire Extinguisher",
+            "description": "Effective:\n- Kitchen fire\n- Electrical fire\n- Gas leak fire\n- Vehicle fire\n- Small equipment fire",
+            "requiredTargetTag": "Fire"
+        },
+        {
+            "itemId": "towel",
+            "itemName": "Towel",
+            "description": "Effective:\n- Small spills\n- Wet surfaces",
+            "requiredTargetTag": "Fire"
+        },
+        {
+            "itemId": "boots",
+            "itemName": "Boots",
+            "description": "",
+            "requiredTargetTag": ""
+        },
+        {
+            "itemId": "mask_45",
+            "itemName": "45 Mask",
+            "description": "",
+            "requiredTargetTag": ""
+        },
+        {
+            "itemId": "bucket",
+            "itemName": "Bucket",
+            "description": "",
+            "requiredTargetTag": ""
+        },
+        {
+            "itemId": "coat",
+            "itemName": "Coat",
+            "description": "",
+            "requiredTargetTag": ""
+        },
+        {
+            "itemId": "gloves",
+            "itemName": "Gloves",
+            "description": "",
+            "requiredTargetTag": ""
+        },
+        {
+            "itemId": "goggles",
+            "itemName": "Goggles",
+            "description": "",
+            "requiredTargetTag": ""
+        },
+        {
+            "itemId": "helmet",
+            "itemName": "Helmet",
+            "description": "",
+            "requiredTargetTag": ""
+        },
+        {
+            "itemId": "lifevest",
+            "itemName": "Lifevest",
+            "description": "",
+            "requiredTargetTag": ""
+        },
+        {
+            "itemId": "mask",
+            "itemName": "Mask",
+            "description": "",
+            "requiredTargetTag": ""
+        },
+        {
+            "itemId": "shoe",
+            "itemName": "Shoe",
+            "description": "",
+            "requiredTargetTag": ""
+        }
+    ]
+}

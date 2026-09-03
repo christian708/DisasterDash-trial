@@ -47,7 +47,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level7_Flood.unity
     guid: e1e934683b164954c84ee888872be119
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Inventory.unity
     guid: 4235c951aaa0fbc4084fbc37352c43b2
   - enabled: 1

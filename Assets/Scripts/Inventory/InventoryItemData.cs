@@ -9,15 +9,15 @@ public class InventoryItemData
 {
     public string itemId;
     public string itemName;
-    public string iconPath; // Resources path, e.g. "Icons/fire_extinguisher"
     public int quantity;
+    public bool pickedUp;
 
-    public InventoryItemData(string id, string name, string icon, int qty = 1)
+    public InventoryItemData(string id, string name, int qty = 0, bool pickedUp = false)
     {
         itemId = id;
         itemName = name;
-        iconPath = icon;
         quantity = qty;
+        this.pickedUp = pickedUp;
     }
 }
 

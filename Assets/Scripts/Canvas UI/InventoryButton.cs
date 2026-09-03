@@ -2,17 +2,20 @@ using UnityEngine;
 
 public class InventoryButton : MonoBehaviour
 {
+    [Tooltip("Reference to the InvSceneNav component on the Bag overlay panel in this scene.")]
+    public InvSceneNav invSceneNav;
+
     public void OpenInventory()
     {
         Time.timeScale = 1f;
 
-        if (SceneController.instance != null)
+        if (invSceneNav != null)
         {
-            SceneController.instance.LoadScene("Inventory");
+            invSceneNav.OpenBag();
         }
         else
         {
-            Debug.LogWarning("SceneController instance not found!");
+            Debug.LogWarning("InvSceneNav reference not set on InventoryButton!");
         }
     }
 }

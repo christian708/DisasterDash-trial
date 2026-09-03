@@ -13,6 +13,10 @@ public class InventoryManager : MonoBehaviour
 
     public List<InventoryItemData> Items { get; private set; } = new List<InventoryItemData>();
 
+    public string EquippedItemId { get; private set; }
+    public string EquippedItemName { get; private set; }
+    public string EquippedItemRequiredTargetTag { get; private set; }
+
     public event Action<InventoryItemData> OnItemAdded;
     public event Action<string> OnItemRemoved;
 
@@ -31,27 +35,81 @@ public class InventoryManager : MonoBehaviour
         LoadInventory();
     }
 
-        public void AddItem(string itemId, string itemName, int qty = 1)
+    private void Start()
+    {
+        EnsureFullRoster();
+    }
+
+    /// <summary>
+    /// Makes sure every item defined in ItemDatabase has an entry here (even if
+    /// pickedUp = false), so locked/unpicked items can still show as greyed-out
+    /// slots in the UI. Runs in Start() so ItemDatabase's Awake has already loaded.
+    /// </summary>
+    private void EnsureFullRoster()
+    {
+        if (ItemDatabase.Instance == null) return;
+
+        bool changed = false;
+
+        foreach (string itemId in ItemDatabase.Instance.GetAllItemIds())
+        {
+            if (!Items.Exists(i => i.itemId == itemId))
+            {
+                ItemDefinition def = ItemDatabase.Instance.GetDefinition(itemId);
+                string name = def != null ? def.itemName : itemId;
+                Items.Add(new InventoryItemData(itemId, name, 0, false));
+                changed = true;
+            }
+        }
+
+        if (changed) SaveInventory();
+    }
+
+    public void AddItem(string itemId, string itemName, int qty = 1)
     {
         InventoryItemData existing = Items.Find(i => i.itemId == itemId);
 
         if (existing != null)
         {
             existing.quantity += qty;
+            existing.pickedUp = true;
         }
         else
         {
-            existing = new InventoryItemData(itemId, itemName, qty.ToString());
+            existing = new InventoryItemData(itemId, itemName, qty, true);
             Items.Add(existing);
         }
 
         SaveInventory();
         OnItemAdded?.Invoke(existing);
+        Debug.Log($"[InventoryManager] Added '{itemId}' - now have {existing.quantity}. Total unique items: {Items.Count}");
     }
 
     public bool HasItem(string itemId)
     {
         return Items.Exists(i => i.itemId == itemId);
+    }
+
+    public void SetEquippedItem(string itemId, string itemName, string requiredTargetTag)
+    {
+        EquippedItemId = itemId;
+        EquippedItemName = itemName;
+        EquippedItemRequiredTargetTag = requiredTargetTag;
+    }
+
+    /// <summary>
+    /// Call this from your New Game flow (alongside ResetProgressPlayerPrefs())
+    /// to wipe all picked-up items back to locked/greyed-out.
+    /// </summary>
+    public void ResetInventory()
+    {
+        Items.Clear();
+        EquippedItemId = null;
+        EquippedItemName = null;
+        EquippedItemRequiredTargetTag = null;
+
+        SaveInventory();
+        EnsureFullRoster();
     }
 
     public void RemoveItem(string itemId, int qty = 1)

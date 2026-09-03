@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 4db9df57a06f9ee4fa18516c2791659e
+guid: 33fa4d7a7ba7b58408d0e921998fd2fb
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -9176122009169712612
-    second: tank_0
+      213: 4512982730157380122
+    second: des_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,23 +113,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: tank_0
+      name: des_0
       rect:
         serializedVersion: 2
-        x: 707
-        y: 143
-        width: 591
-        height: 1128
+        x: 591
+        y: 140
+        width: 817
+        height: 959
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c1aabcb56add7a080800000000000000
-      internalID: -9176122009169712612
+      spriteID: a12d08cd1e551ae30800000000000000
+      internalID: 4512982730157380122
       vertices: []
       indices: 
       edges: []
@@ -138,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 9e8640fa77b747341a0e1f2d62d49eab
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      tank_0: -9176122009169712612
+      des_0: 4512982730157380122
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
