@@ -19,6 +19,17 @@ public class PlayerHeldItem : MonoBehaviour
         Instance = this;
     }
 
+    private void Start()
+    {
+        if (InventoryManager.Instance != null && !string.IsNullOrEmpty(InventoryManager.Instance.EquippedItemId))
+        {
+            PickUp(
+                InventoryManager.Instance.EquippedItemId,
+                InventoryManager.Instance.EquippedItemName,
+                InventoryManager.Instance.EquippedItemRequiredTargetTag);
+        }
+    }
+
     public void PickUp(string itemId, string itemName, string requiredTargetTag)
     {
         IsHoldingItem = true;

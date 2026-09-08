@@ -1,0 +1,84 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8847789368457719664
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8201485494571429717}
+  - component: {fileID: 2972578989920243552}
+  - component: {fileID: 8497418052192544029}
+  m_Layer: 0
+  m_Name: INVManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8201485494571429717
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8847789368457719664}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 5.59818, y: -0.23819, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2972578989920243552
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8847789368457719664}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 484c4854f4b12854e9056a5c2ecb80d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InventoryManager
+--- !u!114 &8497418052192544029
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8847789368457719664}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa33e985b42525a45a15baaf8b41281a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ItemDatabase
+  icons:
+  - itemId: fire_extinguisher
+    icon: {fileID: -370048432957104993, guid: aebcfa95537068f448f7c9baa6af9e58, type: 3}
+  - itemId: towel
+    icon: {fileID: 1504780129815162483, guid: 9fa5f85bb7c03e84093c9c7053b09370, type: 3}
+  - itemId: boots
+    icon: {fileID: -6173936450139588112, guid: 2f7cb5453d5e02947b548fc9037740b5, type: 3}
+  - itemId: mask_45
+    icon: {fileID: 2232273338343553639, guid: e1d4d8564e6480243b9e6d8b8f835b6a, type: 3}
+  - itemId: coat
+    icon: {fileID: -635701237755453809, guid: ddcdc5bc80ee557418cb9805df92fef6, type: 3}
+  - itemId: bucket
+    icon: {fileID: 8189518227400572124, guid: 3c11c4cf66aeef94597b645ddde544f4, type: 3}
+  - itemId: gloves
+    icon: {fileID: -7932428663192456156, guid: 53637e3177d650240a1c0045df2a8940, type: 3}
+  - itemId: goggles
+    icon: {fileID: 5441256868470510636, guid: 026b87624f5fe934eaf9ddc50a2d6f62, type: 3}
+  - itemId: helmet
+    icon: {fileID: -9141475541086931509, guid: b5b41b90ce36ca04b91106f152ef1ddc, type: 3}
+  - itemId: lifevest
+    icon: {fileID: -618900924579114579, guid: cd9f603e57943b146b6faef99219c183, type: 3}
+  - itemId: mask
+    icon: {fileID: 9053089477052250550, guid: 73a525428d708964cbcd57bee2e2442b, type: 3}
+  - itemId: shoe
+    icon: {fileID: -8768353837431031898, guid: c10d1a79085352240a6dad864713a237, type: 3}

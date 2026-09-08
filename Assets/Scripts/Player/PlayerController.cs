@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float moveSpeed = 5f;
 
     private Vector2 moveInput;
+        public bool IsMoving => moveInput.sqrMagnitude > 0.01f;
 
     private bool wasUsingMobileControls = false;
 
@@ -51,6 +52,7 @@ public class PlayerController : MonoBehaviour
     public void OnMove(InputValue value)
     {
         moveInput = value.Get<Vector2>();
+            
     }
 
     private void Update()
@@ -121,5 +123,12 @@ public class PlayerController : MonoBehaviour
         {
             Debug.Log($"[PlayerController] Setting IsRunning=true on animator: {animator.gameObject.name}");
         }
+    }
+
+        public float GetSpeed() => moveSpeed;
+
+        public void SetSpeed(float newSpeed)
+    {
+        moveSpeed = newSpeed;
     }
 }

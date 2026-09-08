@@ -95,6 +95,31 @@ public class InventoryManager : MonoBehaviour
         EquippedItemId = itemId;
         EquippedItemName = itemName;
         EquippedItemRequiredTargetTag = requiredTargetTag;
+
+        // Keep PlayerHeldItem in sync the moment an item is equipped, instead of
+        // only picking it up once at scene Start(). Without this, using an item
+        // on a UseTarget after equipping it mid-scene silently fails because
+        // PlayerHeldItem.HeldItemId never gets updated.
+        if (PlayerHeldItem.Instance != null)
+        {
+            PlayerHeldItem.Instance.PickUp(itemId, itemName, requiredTargetTag);
+        }
+    }
+
+    /// <summary>
+    /// Call this when un-equipping / deselecting an item in the UI, so
+    /// PlayerHeldItem doesn't keep pointing at a stale item.
+    /// </summary>
+    public void ClearEquippedItem()
+    {
+        EquippedItemId = null;
+        EquippedItemName = null;
+        EquippedItemRequiredTargetTag = null;
+
+        if (PlayerHeldItem.Instance != null)
+        {
+            PlayerHeldItem.Instance.ClearHeldItem();
+        }
     }
 
     /// <summary>
