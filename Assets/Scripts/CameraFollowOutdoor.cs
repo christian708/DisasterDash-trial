@@ -11,6 +11,11 @@ using UnityEngine;
 /// For static INTERIOR scenes (kitchen, etc.) where the whole room fits
 /// on screen and the camera doesn't need to scroll, use "Camera Auto Fit"
 /// instead, not this script.
+///
+/// If a CameraShake component is present (on this object or found via
+/// CameraShake.instance), its ShakeOffset is added on top of the follow
+/// position here, in one place, so the two scripts never fight over
+/// transform.position.
 /// </summary>
 [RequireComponent(typeof(Camera))]
 public class CameraFollowOutdoor : MonoBehaviour
@@ -43,6 +48,10 @@ public class CameraFollowOutdoor : MonoBehaviour
     private int lastScreenWidth;
     private int lastScreenHeight;
 
+    // The actual followed position, BEFORE any shake offset is applied.
+    // Kept separate so shake never contaminates the real follow target.
+    private Vector3 basePosition;
+
     private void Awake()
     {
         cam = GetComponent<Camera>();
@@ -62,6 +71,8 @@ public class CameraFollowOutdoor : MonoBehaviour
                 if (bgObj != null) background = bgObj.GetComponent<SpriteRenderer>();
             }
         }
+
+        basePosition = transform.position;
     }
 
     private void Start()
@@ -116,33 +127,35 @@ public class CameraFollowOutdoor : MonoBehaviour
             FitCamera();
         }
 
-        if (target == null) return;
-
-        Vector3 desiredPosition = new Vector3(
-            target.position.x + offset.x,
-            target.position.y + offset.y,
-            transform.position.z
-        );
-
-        Vector3 smoothed = Vector3.Lerp(transform.position, desiredPosition, smoothSpeed * Time.deltaTime);
-
-        if (clampToBackground && background != null)
+        if (target != null)
         {
-            float camHalfHeight = cam.orthographicSize;
-            float camHalfWidth = camHalfHeight * cam.aspect;
+            Vector3 desiredPosition = new Vector3(
+                target.position.x + offset.x,
+                target.position.y + offset.y,
+                basePosition.z
+            );
 
-            Bounds bgBounds = background.bounds;
+            basePosition = Vector3.Lerp(basePosition, desiredPosition, smoothSpeed * Time.deltaTime);
 
-            float minX = bgBounds.min.x + camHalfWidth;
-            float maxX = bgBounds.max.x - camHalfWidth;
-            float minY = bgBounds.min.y + camHalfHeight;
-            float maxY = bgBounds.max.y - camHalfHeight;
+            if (clampToBackground && background != null)
+            {
+                float camHalfHeight = cam.orthographicSize;
+                float camHalfWidth = camHalfHeight * cam.aspect;
 
-            smoothed.x = (minX <= maxX) ? Mathf.Clamp(smoothed.x, minX, maxX) : bgBounds.center.x;
-            smoothed.y = (minY <= maxY) ? Mathf.Clamp(smoothed.y, minY, maxY) : bgBounds.center.y;
+                Bounds bgBounds = background.bounds;
+
+                float minX = bgBounds.min.x + camHalfWidth;
+                float maxX = bgBounds.max.x - camHalfWidth;
+                float minY = bgBounds.min.y + camHalfHeight;
+                float maxY = bgBounds.max.y - camHalfHeight;
+
+                basePosition.x = (minX <= maxX) ? Mathf.Clamp(basePosition.x, minX, maxX) : bgBounds.center.x;
+                basePosition.y = (minY <= maxY) ? Mathf.Clamp(basePosition.y, minY, maxY) : bgBounds.center.y;
+            }
         }
 
-        transform.position = smoothed;
+        Vector3 shakeOffset = CameraShake.instance != null ? CameraShake.instance.ShakeOffset : Vector3.zero;
+        transform.position = basePosition + shakeOffset;
     }
 
 #if UNITY_EDITOR

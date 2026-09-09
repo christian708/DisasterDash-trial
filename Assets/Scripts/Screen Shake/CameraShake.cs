@@ -4,7 +4,15 @@ using UnityEngine;
 /// Trauma-based camera shake. Call AddTrauma(amount) to trigger/intensify shaking.
 /// Trauma decays over time; shake amplitude scales with trauma^2 for a punchier feel
 /// at high trauma and subtle shake at low trauma.
-/// Attach this to the Camera itself (or a parent rig if you have one).
+///
+/// IMPORTANT: this script does NOT write transform.position itself anymore -
+/// it only computes and exposes ShakeOffset. Whatever script owns the camera's
+/// actual position (e.g. CameraFollowOutdoor) is responsible for adding
+/// ShakeOffset on top of its own calculated position, in its own LateUpdate.
+/// This avoids both scripts fighting over the same position each frame.
+///
+/// Rotation shake is still applied directly here since nothing else touches
+/// camera rotation, so there's no conflict there.
 /// </summary>
 public class CameraShake : MonoBehaviour
 {
@@ -17,15 +25,15 @@ public class CameraShake : MonoBehaviour
     [SerializeField] private float noiseFrequency = 25f;   // how fast the Perlin noise evolves
 
     private float trauma = 0f;
-    private Vector3 originalLocalPos;
     private float seedX, seedY, seedRot;
+
+    /// <summary>Current shake offset - add this on top of your own computed camera position.</summary>
+    public Vector3 ShakeOffset { get; private set; }
 
     private void Awake()
     {
         if (instance == null) instance = this;
         else { Destroy(gameObject); return; }
-
-        originalLocalPos = transform.localPosition;
 
         // Random seeds so multiple shakes don't look identical
         seedX = Random.Range(0f, 100f);
@@ -45,12 +53,12 @@ public class CameraShake : MonoBehaviour
             float offsetY = maxOffset * shakeAmount * (Mathf.PerlinNoise(seedY, Time.time * noiseFrequency) * 2f - 1f);
             float roll = maxRoll * shakeAmount * (Mathf.PerlinNoise(seedRot, Time.time * noiseFrequency) * 2f - 1f);
 
-            transform.localPosition = originalLocalPos + new Vector3(offsetX, offsetY, 0f);
+            ShakeOffset = new Vector3(offsetX, offsetY, 0f);
             transform.localRotation = Quaternion.Euler(0f, 0f, roll);
         }
         else
         {
-            transform.localPosition = originalLocalPos;
+            ShakeOffset = Vector3.zero;
             transform.localRotation = Quaternion.identity;
         }
     }
@@ -66,7 +74,7 @@ public class CameraShake : MonoBehaviour
     public void StopShake()
     {
         trauma = 0f;
-        transform.localPosition = originalLocalPos;
+        ShakeOffset = Vector3.zero;
         transform.localRotation = Quaternion.identity;
     }
 
