@@ -80,5 +80,11 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/LoadingScreen1.unity
     guid: 3eedd8a1dbf0eaf4ba77fdc5340c092b
+  - enabled: 1
+    path: Assets/Scenes/Level8_LandslideIn.unity
+    guid: 91794b58519d9924ebc8ce1ad19db27b
+  - enabled: 1
+    path: Assets/Scenes/Level9_Land.unity
+    guid: 84f78ffa99b6cce49b4360b134a12da0
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
