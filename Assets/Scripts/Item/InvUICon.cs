@@ -21,6 +21,10 @@ public class InvUICon : MonoBehaviour
     [SerializeField] private TMP_Text descriptionBodyText;
     [SerializeField] private Button equipButton;
 
+    [Header("Close on Equip")]
+    [Tooltip("The InvSceneNav on this same BagPanel - CloseBag() is called automatically after equipping.")]
+    [SerializeField] private InvSceneNav invSceneNav;
+
     private string selectedItemId;
     private bool equipListenerAdded;
 
@@ -90,5 +94,10 @@ public class InvUICon : MonoBehaviour
         }
 
         if (descriptionPanel != null) descriptionPanel.SetActive(false);
-    }
+
+        if (invSceneNav != null)
+        {
+            invSceneNav.CloseBag();
+        }
+    }   
 }

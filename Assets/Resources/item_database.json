@@ -1,75 +1,76 @@
+
 {
     "items": [
         {
             "itemId": "fire_extinguisher",
             "itemName": "Fire Extinguisher",
-            "description": "Effective:\n- Kitchen fire\n- Electrical fire\n- Gas leak fire\n- Vehicle fire\n- Small equipment fire",
+            "description": "<b><size=120%>Effective:</size></b>\n- Kitchen fire\n- Electrical fire\n- Small equipment fire",
             "requiredTargetTag": "Fire"
         },
         {
             "itemId": "towel",
             "itemName": "Towel",
-            "description": "Effective:\n- Small spills\n- Wet surfaces",
+            "description": "<b><size=120%>Effective:</size></b>\n- Small spills\n- Wet surfaces\n- Gas leak fire",
             "requiredTargetTag": "Fire"
         },
         {
             "itemId": "boots",
             "itemName": "Boots",
-            "description": "",
+            "description": "<b><size=120%>Effective:</size></b>\n- Walking through shallow floodwater\n- Protecting feet from muddy ground",
             "requiredTargetTag": ""
         },
         {
             "itemId": "mask_45",
             "itemName": "45 Mask",
-            "description": "",
+            "description": "<b><size=120%>Effective:</size></b>\n- Filtering dust particles\n- Reducing exposure to airborne particles",
             "requiredTargetTag": ""
         },
         {
             "itemId": "bucket",
             "itemName": "Bucket",
-            "description": "",
+            "description": "<b><size=120%>Effective:</size></b>\n- Carrying water for suitable small fires\n- Transporting water",
             "requiredTargetTag": ""
         },
         {
             "itemId": "coat",
             "itemName": "Coat",
-            "description": "",
+            "description": "<b><size=120%>Effective:</size></b>\n- Protection from heavy rain\n- Staying dry during storms",
             "requiredTargetTag": ""
         },
         {
             "itemId": "gloves",
             "itemName": "Gloves",
-            "description": "",
+            "description": "<b><size=120%>Effective:</size></b>\n- Protecting hands from dirt and minor hazards\n- Handling safe objects during rescue",
             "requiredTargetTag": ""
         },
         {
             "itemId": "goggles",
             "itemName": "Goggles",
-            "description": "",
+            "description": "<b><size=120%>Effective:</size></b>\n- Protecting eyes from dust\n- Shielding eyes from flying debris",
             "requiredTargetTag": ""
         },
         {
             "itemId": "helmet",
             "itemName": "Helmet",
-            "description": "",
+            "description": "<b><size=120%>Effective:</size></b>\n- Protecting the head from falling debris\n- Reducing the risk of head injuries",
             "requiredTargetTag": ""
         },
         {
             "itemId": "lifevest",
             "itemName": "Lifevest",
-            "description": "",
+            "description": "<b><size=120%>Effective:</size></b>\n- Helping keep the wearer afloat\n- Improving safety during flood evacuation",
             "requiredTargetTag": ""
         },
         {
             "itemId": "mask",
             "itemName": "Mask",
-            "description": "",
+            "description": "<b><size=120%>Effective:</size></b>\n- Reducing exposure to dust\n- Filtering particles, depending on mask type",
             "requiredTargetTag": ""
         },
         {
             "itemId": "shoe",
-            "itemName": "Shoe",
-            "description": "",
+            "itemName": "Sturdy Shoe",
+            "description": "<b><size=120%>Effective:</size></b>\n- Walking on rough terrain\n- Protecting feet from sharp debris",
             "requiredTargetTag": ""
         }
     ]

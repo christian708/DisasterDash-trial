@@ -81,9 +81,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ad69a9dd62de8e4b991ecd469351b88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UseTarget
-  requiredItemId: fire_extinguisher
+  requiredItemId: bucket
   resolveEffectPrefab: {fileID: 477831175357753837, guid: 952e2132c911d4348bd8105dac56a00a, type: 3}
   objectToDeactivate: {fileID: 5217872124660295751}
+  canRelight: 0
+  relightDelay: 5
 --- !u!1 &5217872124660295751
 GameObject:
   m_ObjectHideFlags: 0
@@ -99,7 +101,7 @@ GameObject:
   - component: {fileID: 605876064681126736}
   m_Layer: 0
   m_Name: Fire1
-  m_TagString: Fire
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -114,7 +116,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -2.56, y: -0.38, z: 0}
-  m_LocalScale: {x: 0.41223198, y: 0.4542217, z: 1}
+  m_LocalScale: {x: 0.22845896, y: 0.34280112, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4645641282726834454}
@@ -167,7 +169,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_MaskInteraction: 0
   m_Sprite: {fileID: -2924657357275781364, guid: a9bb4e2771b4b2242bd0ef5736b4a484, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

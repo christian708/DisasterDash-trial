@@ -10,9 +10,12 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float moveSpeed = 5f;
 
     private Vector2 moveInput;
-        public bool IsMoving => moveInput.sqrMagnitude > 0.01f;
 
     private bool wasUsingMobileControls = false;
+
+    // Multiplier applied on top of moveSpeed by hazards like wind/flood.
+    // 1 = normal speed, 0.5 = half speed, etc. Reset to 1 on trigger exit.
+    private float speedMultiplier = 1f;
 
     private void Awake()
     {
@@ -52,7 +55,6 @@ public class PlayerController : MonoBehaviour
     public void OnMove(InputValue value)
     {
         moveInput = value.Get<Vector2>();
-            
     }
 
     private void Update()
@@ -94,7 +96,7 @@ public class PlayerController : MonoBehaviour
 
     private void HandleMovement()
     {
-        rb.linearVelocity = moveInput * moveSpeed;
+        rb.linearVelocity = new Vector2(moveInput.x * moveSpeed * speedMultiplier, rb.linearVelocity.y);
 
         if (spriteRenderer != null)
         {
@@ -109,7 +111,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-        private void HandleAnimation()
+    private void HandleAnimation()
     {
         if (animator == null)
             return;
@@ -117,17 +119,27 @@ public class PlayerController : MonoBehaviour
         bool isMoving = moveInput.sqrMagnitude > 0.01f;
 
         animator.SetBool("IsRunning", isMoving);
-
-        // TEMP DEBUG - remove once confirmed
-        if (isMoving)
-        {
-            Debug.Log($"[PlayerController] Setting IsRunning=true on animator: {animator.gameObject.name}");
-        }
     }
 
-        public float GetSpeed() => moveSpeed;
+    /// <summary>Whether the player currently has movement input.</summary>
+    public bool IsMoving => moveInput.sqrMagnitude > 0.01f;
 
-        public void SetSpeed(float newSpeed)
+    /// <summary>
+    /// Call from hazards like WindGust/FloodOverlay to temporarily change speed.
+    /// 1 = normal, 0.5 = half speed. Call again with 1 to reset (e.g. on trigger exit).
+    /// </summary>
+    public void SetSpeedMultiplier(float multiplier)
+    {
+        speedMultiplier = multiplier;
+    }
+
+    /// <summary>
+    /// Sets moveSpeed directly to an absolute value (used by Wind.cs).
+    /// Note: this is a separate mechanism from SetSpeedMultiplier - avoid
+    /// combining wind and flood/other multiplier-based hazards at the same
+    /// time on the same player, since they'd fight over the same speed value.
+    /// </summary>
+    public void SetSpeed(float newSpeed)
     {
         moveSpeed = newSpeed;
     }

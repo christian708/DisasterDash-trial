@@ -126,8 +126,15 @@ public class PlayerHealth : MonoBehaviour
 
     private void ApplyKnockback(Vector2 sourcePosition)
     {
-        Vector2 direction = ((Vector2)transform.position - sourcePosition).normalized;
-        rb.AddForce(direction * knockbackForce, ForceMode2D.Impulse);
+        // Horizontal-only push. A full normalized direction (including Y)
+        // used to be harmless because HandleMovement overwrote the whole
+        // velocity vector every frame - now that Y is left alone for
+        // gravity to work, a vertical knockback component would linger
+        // and fight with gravity (slow sink/float). Keep it purely sideways.
+        float directionX = Mathf.Sign(transform.position.x - sourcePosition.x);
+        if (directionX == 0f) directionX = 1f; // avoid a zero-force edge case if positions match exactly
+
+        rb.AddForce(new Vector2(directionX, 0f) * knockbackForce, ForceMode2D.Impulse);
     }
 
     public void Heal(int amount = 1)
