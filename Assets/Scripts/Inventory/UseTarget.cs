@@ -1,68 +1,32 @@
-using System.Collections;
 using UnityEngine;
+using System.Collections;
 
 /// <summary>
-/// Attach directly to the fire GameObject itself (sprite + collider all on one object).
-/// Implements IInteractable so your existing PlayerInteractor can detect and call it.
-///
-/// Supports "relighting": after being put out, the fire reappears after a delay,
-/// up to a set number of times, showing a warning popup each relight. After the
-/// final extinguish, it stays out permanently.
+/// Attach to anything a held item can be used on (a fire, a spill, etc.).
+/// Each target has exactly ONE specific item that resolves it - set
+/// requiredItemId to match the itemId of the PickableItem that should work here.
 /// </summary>
-[RequireComponent(typeof(Collider2D))]
 public class UseTarget : MonoBehaviour, IInteractable
 {
-    [Tooltip("Must match the itemId on the PickableItem that resolves this, e.g. 'fire_extinguisher'")]
+    [Tooltip("The one specific itemId that resolves this target, e.g. 'fire_extinguisher'")]
     public string requiredItemId;
 
     [Tooltip("Optional effect (smoke puff, sparkle, etc.) spawned when resolved")]
     public GameObject resolveEffectPrefab;
 
-    [Header("Relight Settings")]
-    [Tooltip("How many times this fire can be put out before it stays out for good.")]
-    public int maxExtinguishes = 3;
+    [Tooltip("What actually gets deactivated when resolved. Leave empty to deactivate this object itself; assign the parent Fire object if UseTarget sits on a separate wider-range child.")]
+    public GameObject objectToDeactivate;
 
-    [Tooltip("Seconds after being put out before the fire relights (if under maxExtinguishes).")]
-    public float relightDelay = 3f;
+    [Header("Relight (optional)")]
+    [Tooltip("How many times this target can relight after being resolved. 0 = never relights (stays resolved permanently). e.g. 3 means it can flare back up 3 times, then stays out for good on the 4th extinguish.")]
+    public int maxRelights = 0;
+    [Tooltip("Seconds before the target comes back, each time it relights.")]
+    public float relightDelay = 5f;
 
-    [Tooltip("Popup shown when the fire relights, warning the player again. Leave empty for none. Starts inactive.")]
-    public GameObject relightTipPanel;
+    [Tooltip("Optional popup shown when this target relights (e.g. TipPopup_Extinguisher). Leave empty for no popup.")]
+    public GameObject relightPopup;
 
-    private int timesExtinguished = 0;
-    private bool isPermanentlyOut = false;
-    private bool hasShownRelightTip = false;
-
-    private SpriteRenderer spriteRenderer;
-    private Collider2D fireCollider;
-    private Animator animator;
-    private ParticleSystem particles;
-    private FireHazard fireHazard;
-    private Collider2D fireHazardCollider;
-
-    private void Awake()
-    {
-        // Collider lives on this same object (the range/trigger object).
-        fireCollider = GetComponent<Collider2D>();
-
-        // Visuals (sprite, animator, particles) may live on this object OR a
-        // parent (e.g. this script sits on "Fire1_Range" while the actual
-        // flame sprite/animator is on the parent "Fire1"). GetComponentInParent
-        // checks this object first, then walks upward, so it works either way.
-        spriteRenderer = GetComponentInParent<SpriteRenderer>();
-        animator = GetComponentInParent<Animator>();
-        particles = GetComponentInParent<ParticleSystem>();
-
-        // FireHazard (the damage script) may live on a different object than
-        // this collider too — same search pattern. It also has its OWN
-        // Collider2D (separate from fireCollider above), which keeps
-        // generating trigger events even if the FireHazard script itself is
-        // disabled — so we must disable that specific collider directly.
-        fireHazard = GetComponentInParent<FireHazard>();
-        if (fireHazard != null)
-        {
-            fireHazardCollider = fireHazard.GetComponent<Collider2D>();
-        }
-    }
+    private int timesRelit = 0;
 
     public void OnPickUp()
     {
@@ -71,7 +35,6 @@ public class UseTarget : MonoBehaviour, IInteractable
 
     public void OnUse()
     {
-        if (isPermanentlyOut) return;
         if (!PlayerHeldItem.Instance.IsHoldingItem) return;
         if (PlayerHeldItem.Instance.HeldItemId != requiredItemId) return;
 
@@ -81,79 +44,39 @@ public class UseTarget : MonoBehaviour, IInteractable
             playerAnimator.SetTrigger("BoyEx");
         }
 
+        GameObject target = objectToDeactivate != null ? objectToDeactivate : gameObject;
+
         if (resolveEffectPrefab != null)
         {
-            Instantiate(resolveEffectPrefab, transform.position, Quaternion.identity);
+            Instantiate(resolveEffectPrefab, target.transform.position, Quaternion.identity);
         }
 
-        string heldItemId = PlayerHeldItem.Instance.HeldItemId;
-        string heldItemName = PlayerHeldItem.Instance.HeldItemName;
+        InventoryManager.Instance.AddItem(PlayerHeldItem.Instance.HeldItemId, PlayerHeldItem.Instance.HeldItemName);
+        InventoryNotificationUI.Instance.ShowMessage($"{PlayerHeldItem.Instance.HeldItemName} added to inventory!");
 
-        PlayerHeldItem.Instance.ClearHeldItem();
-        SetFireVisible(false); // fire goes out immediately, GameObject stays active
+        target.SetActive(false);
 
-        timesExtinguished++;
-
-        if (InventoryManager.Instance != null)
+        if (timesRelit < maxRelights)
         {
-            InventoryManager.Instance.AddItem(heldItemId, heldItemName);
-        }
-        else
-        {
-            Debug.LogWarning("[UseTarget] InventoryManager.Instance was null — item not added back to inventory.");
-        }
-
-        if (InventoryNotificationUI.Instance != null)
-        {
-            InventoryNotificationUI.Instance.ShowMessage($"{heldItemName} added to inventory!");
-        }
-        else
-        {
-            Debug.LogWarning("[UseTarget] InventoryNotificationUI.Instance was null — message not shown.");
-        }
-
-        if (timesExtinguished >= maxExtinguishes)
-        {
-            isPermanentlyOut = true;
-        }
-        else
-        {
-            StartCoroutine(RelightAfterDelay());
+            timesRelit++;
+            // Runs on a separate always-active object so the timer survives
+            // this target's GameObject being turned off.
+            CoroutineRunner.Instance.StartCoroutine(RelightAfterDelay(target));
         }
     }
 
-    private IEnumerator RelightAfterDelay()
+    private IEnumerator RelightAfterDelay(GameObject target)
     {
         yield return new WaitForSeconds(relightDelay);
 
-        SetFireVisible(true);
-
-        // Only ever show this popup once per fire, on its very first relight.
-        // The player must close it manually via its own X button from here on.
-        if (relightTipPanel != null && !hasShownRelightTip)
+        if (target != null)
         {
-            relightTipPanel.SetActive(true);
-            hasShownRelightTip = true;
-        }
-    }
+            target.SetActive(true);
 
-    /// <summary>
-    /// Toggles the fire's visuals and collider without disabling the GameObject
-    /// itself, so this script (and its running coroutine) stays alive while
-    /// the fire is "out."
-    /// </summary>
-    private void SetFireVisible(bool visible)
-    {
-        if (spriteRenderer != null) spriteRenderer.enabled = visible;
-        if (fireCollider != null) fireCollider.enabled = visible;
-        if (animator != null) animator.enabled = visible;
-        if (fireHazard != null) fireHazard.enabled = visible;
-        if (fireHazardCollider != null) fireHazardCollider.enabled = visible; // actually stops trigger events
-
-        if (particles != null)
-        {
-            if (visible) particles.Play();
-            else particles.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
+            if (relightPopup != null)
+            {
+                relightPopup.SetActive(true);
+            }
         }
     }
 }

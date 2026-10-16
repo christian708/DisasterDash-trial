@@ -11,7 +11,6 @@ public class FireHazard : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log($"[FireHazard] Trigger entered by: {other.name}, tag: {other.tag}");
         if (other.CompareTag("Player"))
         {
             playerHealth = other.GetComponent<PlayerHealth>();
@@ -37,7 +36,6 @@ public class FireHazard : MonoBehaviour
 
     private void TryDamage(Vector2 firePosition)
     {
-        Debug.Log($"[FireHazard] TryDamage called. enabled={this.enabled}, playerHealth={(playerHealth != null ? "set" : "null")}");
         if (playerHealth == null) return;
 
         if (Time.time - lastDamageTime >= damageInterval)

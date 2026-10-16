@@ -33,9 +33,10 @@ public class MainMenuManager : MonoBehaviour
         {
             InventoryManager.Instance.ResetInventory();
         }
-
-        Debug.Log("Level1Completed after reset: " + PlayerPrefs.GetInt("Level1Completed", 0));
-
+        else
+        {
+    Debug.LogWarning("[MainMenuManager] InventoryManager.Instance is NULL - inventory not reset!");
+        }
         SceneManager.LoadScene(characterSelectScene);
     }
 

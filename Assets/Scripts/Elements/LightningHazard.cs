@@ -1,11 +1,6 @@
 using UnityEngine;
 using System.Collections;
 
-/// <summary>
-/// One lightning strike sequence: warning glow -> brief strike window that
-/// deals damage if the player is standing in it -> cleans itself up.
-/// Meant to be spawned by LightningSpawner at random positions.
-/// </summary>
 public class LightningHazard : MonoBehaviour
 {
     [Header("Timing")]
