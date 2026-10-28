@@ -114,6 +114,10 @@
             "name": "AudioBehaviour",
             "scenes": [
               "Assets/Scenes/Charac_Select.unity",
+              "Assets/Scenes/Equake.unity",
+              "Assets/Scenes/Equake1.unity",
+              "Assets/Scenes/Fire.unity",
+              "Assets/Scenes/Fire1.unity",
               "Assets/Scenes/Level0_Fire_Interior.unity",
               "Assets/Scenes/Level1_Fire.unity",
               "Assets/Scenes/Level10_VolIn.unity",
@@ -135,7 +139,8 @@
               "Assets/Scenes/Story3.unity",
               "Assets/Scenes/Story4.unity",
               "Assets/Scenes/Story5.unity",
-              "Assets/Scenes/Story6.unity"
+              "Assets/Scenes/Story6.unity",
+              "Assets/Scenes/Tp.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -150,6 +155,10 @@
             "name": "AudioListener",
             "scenes": [
               "Assets/Scenes/Charac_Select.unity",
+              "Assets/Scenes/Equake.unity",
+              "Assets/Scenes/Equake1.unity",
+              "Assets/Scenes/Fire.unity",
+              "Assets/Scenes/Fire1.unity",
               "Assets/Scenes/Level0_Fire_Interior.unity",
               "Assets/Scenes/Level1_Fire.unity",
               "Assets/Scenes/Level10_VolIn.unity",
@@ -171,7 +180,8 @@
               "Assets/Scenes/Story3.unity",
               "Assets/Scenes/Story4.unity",
               "Assets/Scenes/Story5.unity",
-              "Assets/Scenes/Story6.unity"
+              "Assets/Scenes/Story6.unity",
+              "Assets/Scenes/Tp.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -215,6 +225,10 @@
             "name": "Camera",
             "scenes": [
               "Assets/Scenes/Charac_Select.unity",
+              "Assets/Scenes/Equake.unity",
+              "Assets/Scenes/Equake1.unity",
+              "Assets/Scenes/Fire.unity",
+              "Assets/Scenes/Fire1.unity",
               "Assets/Scenes/Level0_Fire_Interior.unity",
               "Assets/Scenes/Level1_Fire.unity",
               "Assets/Scenes/Level10_VolIn.unity",
@@ -236,7 +250,8 @@
               "Assets/Scenes/Story3.unity",
               "Assets/Scenes/Story4.unity",
               "Assets/Scenes/Story5.unity",
-              "Assets/Scenes/Story6.unity"
+              "Assets/Scenes/Story6.unity",
+              "Assets/Scenes/Tp.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -257,6 +272,10 @@
             "name": "Cubemap",
             "scenes": [
               "Assets/Scenes/Charac_Select.unity",
+              "Assets/Scenes/Equake.unity",
+              "Assets/Scenes/Equake1.unity",
+              "Assets/Scenes/Fire.unity",
+              "Assets/Scenes/Fire1.unity",
               "Assets/Scenes/Level0_Fire_Interior.unity",
               "Assets/Scenes/Level1_Fire.unity",
               "Assets/Scenes/Level10_VolIn.unity",
@@ -276,7 +295,8 @@
               "Assets/Scenes/Story3.unity",
               "Assets/Scenes/Story4.unity",
               "Assets/Scenes/Story5.unity",
-              "Assets/Scenes/Story6.unity"
+              "Assets/Scenes/Story6.unity",
+              "Assets/Scenes/Tp.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -297,6 +317,10 @@
             "name": "EditorExtension",
             "scenes": [
               "Assets/Scenes/Charac_Select.unity",
+              "Assets/Scenes/Equake.unity",
+              "Assets/Scenes/Equake1.unity",
+              "Assets/Scenes/Fire.unity",
+              "Assets/Scenes/Fire1.unity",
               "Assets/Scenes/Level0_Fire_Interior.unity",
               "Assets/Scenes/Level1_Fire.unity",
               "Assets/Scenes/Level10_VolIn.unity",
@@ -318,7 +342,8 @@
               "Assets/Scenes/Story3.unity",
               "Assets/Scenes/Story4.unity",
               "Assets/Scenes/Story5.unity",
-              "Assets/Scenes/Story6.unity"
+              "Assets/Scenes/Story6.unity",
+              "Assets/Scenes/Tp.unity"
             ],
             "dependencyType": 1,
             "icon": null
@@ -333,6 +358,10 @@
             "name": "GameObject",
             "scenes": [
               "Assets/Scenes/Charac_Select.unity",
+              "Assets/Scenes/Equake.unity",
+              "Assets/Scenes/Equake1.unity",
+              "Assets/Scenes/Fire.unity",
+              "Assets/Scenes/Fire1.unity",
               "Assets/Scenes/Level0_Fire_Interior.unity",
               "Assets/Scenes/Level1_Fire.unity",
               "Assets/Scenes/Level10_VolIn.unity",
@@ -354,7 +383,8 @@
               "Assets/Scenes/Story3.unity",
               "Assets/Scenes/Story4.unity",
               "Assets/Scenes/Story5.unity",
-              "Assets/Scenes/Story6.unity"
+              "Assets/Scenes/Story6.unity",
+              "Assets/Scenes/Tp.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -387,6 +417,10 @@
             "name": "LevelGameManager",
             "scenes": [
               "Assets/Scenes/Charac_Select.unity",
+              "Assets/Scenes/Equake.unity",
+              "Assets/Scenes/Equake1.unity",
+              "Assets/Scenes/Fire.unity",
+              "Assets/Scenes/Fire1.unity",
               "Assets/Scenes/Level0_Fire_Interior.unity",
               "Assets/Scenes/Level1_Fire.unity",
               "Assets/Scenes/Level10_VolIn.unity",
@@ -408,7 +442,8 @@
               "Assets/Scenes/Story3.unity",
               "Assets/Scenes/Story4.unity",
               "Assets/Scenes/Story5.unity",
-              "Assets/Scenes/Story6.unity"
+              "Assets/Scenes/Story6.unity",
+              "Assets/Scenes/Tp.unity"
             ],
             "dependencyType": 1,
             "icon": null
@@ -441,6 +476,10 @@
             "name": "LightmapSettings",
             "scenes": [
               "Assets/Scenes/Charac_Select.unity",
+              "Assets/Scenes/Equake.unity",
+              "Assets/Scenes/Equake1.unity",
+              "Assets/Scenes/Fire.unity",
+              "Assets/Scenes/Fire1.unity",
               "Assets/Scenes/Level0_Fire_Interior.unity",
               "Assets/Scenes/Level1_Fire.unity",
               "Assets/Scenes/Level10_VolIn.unity",
@@ -462,7 +501,8 @@
               "Assets/Scenes/Story3.unity",
               "Assets/Scenes/Story4.unity",
               "Assets/Scenes/Story5.unity",
-              "Assets/Scenes/Story6.unity"
+              "Assets/Scenes/Story6.unity",
+              "Assets/Scenes/Tp.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -518,6 +558,10 @@
             "name": "MonoBehaviour",
             "scenes": [
               "Assets/Scenes/Charac_Select.unity",
+              "Assets/Scenes/Equake.unity",
+              "Assets/Scenes/Equake1.unity",
+              "Assets/Scenes/Fire.unity",
+              "Assets/Scenes/Fire1.unity",
               "Assets/Scenes/Level0_Fire_Interior.unity",
               "Assets/Scenes/Level1_Fire.unity",
               "Assets/Scenes/Level10_VolIn.unity",
@@ -539,7 +583,8 @@
               "Assets/Scenes/Story3.unity",
               "Assets/Scenes/Story4.unity",
               "Assets/Scenes/Story5.unity",
-              "Assets/Scenes/Story6.unity"
+              "Assets/Scenes/Story6.unity",
+              "Assets/Scenes/Tp.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -554,6 +599,10 @@
             "name": "MonoScript",
             "scenes": [
               "Assets/Scenes/Charac_Select.unity",
+              "Assets/Scenes/Equake.unity",
+              "Assets/Scenes/Equake1.unity",
+              "Assets/Scenes/Fire.unity",
+              "Assets/Scenes/Fire1.unity",
               "Assets/Scenes/Level0_Fire_Interior.unity",
               "Assets/Scenes/Level1_Fire.unity",
               "Assets/Scenes/Level10_VolIn.unity",
@@ -575,7 +624,8 @@
               "Assets/Scenes/Story3.unity",
               "Assets/Scenes/Story4.unity",
               "Assets/Scenes/Story5.unity",
-              "Assets/Scenes/Story6.unity"
+              "Assets/Scenes/Story6.unity",
+              "Assets/Scenes/Tp.unity"
             ],
             "dependencyType": 1,
             "icon": null
@@ -584,6 +634,10 @@
             "name": "NamedObject",
             "scenes": [
               "Assets/Scenes/Charac_Select.unity",
+              "Assets/Scenes/Equake.unity",
+              "Assets/Scenes/Equake1.unity",
+              "Assets/Scenes/Fire.unity",
+              "Assets/Scenes/Fire1.unity",
               "Assets/Scenes/Level0_Fire_Interior.unity",
               "Assets/Scenes/Level1_Fire.unity",
               "Assets/Scenes/Level10_VolIn.unity",
@@ -605,7 +659,8 @@
               "Assets/Scenes/Story3.unity",
               "Assets/Scenes/Story4.unity",
               "Assets/Scenes/Story5.unity",
-              "Assets/Scenes/Story6.unity"
+              "Assets/Scenes/Story6.unity",
+              "Assets/Scenes/Tp.unity"
             ],
             "dependencyType": 1,
             "icon": null
@@ -644,6 +699,10 @@
             "name": "RectTransform",
             "scenes": [
               "Assets/Scenes/Charac_Select.unity",
+              "Assets/Scenes/Equake.unity",
+              "Assets/Scenes/Equake1.unity",
+              "Assets/Scenes/Fire.unity",
+              "Assets/Scenes/Fire1.unity",
               "Assets/Scenes/Level0_Fire_Interior.unity",
               "Assets/Scenes/Level1_Fire.unity",
               "Assets/Scenes/Level10_VolIn.unity",
@@ -664,7 +723,8 @@
               "Assets/Scenes/Story3.unity",
               "Assets/Scenes/Story4.unity",
               "Assets/Scenes/Story5.unity",
-              "Assets/Scenes/Story6.unity"
+              "Assets/Scenes/Story6.unity",
+              "Assets/Scenes/Tp.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -679,6 +739,10 @@
             "name": "RenderSettings",
             "scenes": [
               "Assets/Scenes/Charac_Select.unity",
+              "Assets/Scenes/Equake.unity",
+              "Assets/Scenes/Equake1.unity",
+              "Assets/Scenes/Fire.unity",
+              "Assets/Scenes/Fire1.unity",
               "Assets/Scenes/Level0_Fire_Interior.unity",
               "Assets/Scenes/Level1_Fire.unity",
               "Assets/Scenes/Level10_VolIn.unity",
@@ -700,7 +764,8 @@
               "Assets/Scenes/Story3.unity",
               "Assets/Scenes/Story4.unity",
               "Assets/Scenes/Story5.unity",
-              "Assets/Scenes/Story6.unity"
+              "Assets/Scenes/Story6.unity",
+              "Assets/Scenes/Tp.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -774,6 +839,10 @@
             "name": "Sprite",
             "scenes": [
               "Assets/Scenes/Charac_Select.unity",
+              "Assets/Scenes/Equake.unity",
+              "Assets/Scenes/Equake1.unity",
+              "Assets/Scenes/Fire.unity",
+              "Assets/Scenes/Fire1.unity",
               "Assets/Scenes/Level0_Fire_Interior.unity",
               "Assets/Scenes/Level1_Fire.unity",
               "Assets/Scenes/Level10_VolIn.unity",
@@ -794,7 +863,8 @@
               "Assets/Scenes/Story3.unity",
               "Assets/Scenes/Story4.unity",
               "Assets/Scenes/Story5.unity",
-              "Assets/Scenes/Story6.unity"
+              "Assets/Scenes/Story6.unity",
+              "Assets/Scenes/Tp.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -2262,6 +2332,7 @@
               "Assets/Scenes/Level7_Flood.unity",
               "Assets/Scenes/Level8_LandslideIn.unity",
               "Assets/Scenes/Level9_Land.unity",
+              "Assets/Scenes/LevelMenu.unity",
               "Assets/Scenes/MainMenu.unity"
             ],
             "dependencyType": 0,
@@ -2335,6 +2406,10 @@
             "name": "Canvas",
             "scenes": [
               "Assets/Scenes/Charac_Select.unity",
+              "Assets/Scenes/Equake.unity",
+              "Assets/Scenes/Equake1.unity",
+              "Assets/Scenes/Fire.unity",
+              "Assets/Scenes/Fire1.unity",
               "Assets/Scenes/Level0_Fire_Interior.unity",
               "Assets/Scenes/Level1_Fire.unity",
               "Assets/Scenes/Level10_VolIn.unity",
@@ -2355,7 +2430,8 @@
               "Assets/Scenes/Story3.unity",
               "Assets/Scenes/Story4.unity",
               "Assets/Scenes/Story5.unity",
-              "Assets/Scenes/Story6.unity"
+              "Assets/Scenes/Story6.unity",
+              "Assets/Scenes/Tp.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -2374,6 +2450,10 @@
             "name": "CanvasRenderer",
             "scenes": [
               "Assets/Scenes/Charac_Select.unity",
+              "Assets/Scenes/Equake.unity",
+              "Assets/Scenes/Equake1.unity",
+              "Assets/Scenes/Fire.unity",
+              "Assets/Scenes/Fire1.unity",
               "Assets/Scenes/Level0_Fire_Interior.unity",
               "Assets/Scenes/Level1_Fire.unity",
               "Assets/Scenes/Level10_VolIn.unity",
@@ -2394,7 +2474,8 @@
               "Assets/Scenes/Story3.unity",
               "Assets/Scenes/Story4.unity",
               "Assets/Scenes/Story5.unity",
-              "Assets/Scenes/Story6.unity"
+              "Assets/Scenes/Story6.unity",
+              "Assets/Scenes/Tp.unity"
             ],
             "dependencyType": 0,
             "icon": null

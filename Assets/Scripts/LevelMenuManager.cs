@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class LevelMenuManager : MonoBehaviour
@@ -50,11 +51,12 @@ public class LevelMenuManager : MonoBehaviour
     {
         if (SceneController.instance != null)
         {
-            SceneController.instance.LoadScene("Level0_Fire_Interior");
+            SceneController.instance.LoadScene("Fire");
         }
         else
         {
             Debug.LogWarning("SceneController instance not found!");
+            SceneManager.LoadScene("Fire");
         }
     }
 
@@ -62,11 +64,12 @@ public class LevelMenuManager : MonoBehaviour
     {
         if (SceneController.instance != null)
         {
-            SceneController.instance.LoadScene("Level2_Earthquake_Interior");
+            SceneController.instance.LoadScene("Equake");
         }
         else
         {
             Debug.LogWarning("SceneController instance not found!");
+            SceneManager.LoadScene("Equake");
         }
     }
 
@@ -74,11 +77,12 @@ public class LevelMenuManager : MonoBehaviour
     {
         if (SceneController.instance != null)
         {
-            SceneController.instance.LoadScene("Level5_Typhoon");
+            SceneController.instance.LoadScene("Tp");
         }
         else
         {
             Debug.LogWarning("SceneController instance not found!");
+            SceneManager.LoadScene("Tp");
         }
     }
 

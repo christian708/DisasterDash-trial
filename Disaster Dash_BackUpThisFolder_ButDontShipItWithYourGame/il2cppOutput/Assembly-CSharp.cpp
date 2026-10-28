@@ -518,7 +518,6 @@ IL2CPP_EXTERN_C String_t* _stringLiteral0030D510D12B236BACAB9C3C88700B0C6F0B2F73
 IL2CPP_EXTERN_C String_t* _stringLiteral00B28FF06B788B9B67C6B259800F404F9F3761FD;
 IL2CPP_EXTERN_C String_t* _stringLiteral0118739006008AF94D1EEC035DA4EC3D3B4F52E8;
 IL2CPP_EXTERN_C String_t* _stringLiteral0133A431B27A6D11119B0474097113BBD7110B90;
-IL2CPP_EXTERN_C String_t* _stringLiteral053C759E96964401233D9713012F3B2C019E261D;
 IL2CPP_EXTERN_C String_t* _stringLiteral0A5B75A180F8485D63D34FF1F4EDF6699CD0E2E0;
 IL2CPP_EXTERN_C String_t* _stringLiteral0BD5CB4D7CD0B29A5EBB1C2E01C49A483CBB309C;
 IL2CPP_EXTERN_C String_t* _stringLiteral0C1027955C34F65AB4C5F60D7123BFDD877E0914;
@@ -536,6 +535,7 @@ IL2CPP_EXTERN_C String_t* _stringLiteral1D3D268E7BE4329DE86A2A8F65F53BAF8D2EFF28
 IL2CPP_EXTERN_C String_t* _stringLiteral1FA4F0533EA4D7F90D591F424550D18D02858562;
 IL2CPP_EXTERN_C String_t* _stringLiteral205CC767556A7141AD0E764E8A743C89FE06CD6A;
 IL2CPP_EXTERN_C String_t* _stringLiteral207A5669398DC0879AC1AB7CBE75BB1896CE8B43;
+IL2CPP_EXTERN_C String_t* _stringLiteral211EEF0C887DA90083B7BA4771F3A4C80D17421F;
 IL2CPP_EXTERN_C String_t* _stringLiteral2217BD441BFEE23C74BEBF259B85227C0067232F;
 IL2CPP_EXTERN_C String_t* _stringLiteral22EFCE732D45BCC59CB5B326A2F258636984938F;
 IL2CPP_EXTERN_C String_t* _stringLiteral2386E77CF610F786B06A91AF2C1B3FD2282D2745;
@@ -546,7 +546,7 @@ IL2CPP_EXTERN_C String_t* _stringLiteral3862A0530D8BBC7E2EB8182380E5522382B00DF6
 IL2CPP_EXTERN_C String_t* _stringLiteral38BA0D694D9FC87BD58ED8BAFB7F6E8127FFAC25;
 IL2CPP_EXTERN_C String_t* _stringLiteral3B2C1C62D4D1C2A0C8A9AC42DB00D33C654F9AD0;
 IL2CPP_EXTERN_C String_t* _stringLiteral3B5D6DAED143B773D3CA20F84F6F332B4D3D3F66;
-IL2CPP_EXTERN_C String_t* _stringLiteral3E9113AD0A0B9FCDA81F0B03631BE7AA1542BB59;
+IL2CPP_EXTERN_C String_t* _stringLiteral4BD5683A61D2E0939E216209C064CBC33BD06B98;
 IL2CPP_EXTERN_C String_t* _stringLiteral4E1FD0C50ED08B793346ADA369844912D4E7F974;
 IL2CPP_EXTERN_C String_t* _stringLiteral4EFF7E02ACBA68565BF3FCEA7D66340139A671DE;
 IL2CPP_EXTERN_C String_t* _stringLiteral5230F5FD1E0998B73530AA850D3A5872D61228EC;
@@ -600,6 +600,7 @@ IL2CPP_EXTERN_C String_t* _stringLiteralCEA16FC0CD8596217BF99EF6746DFD78BC1C5A39
 IL2CPP_EXTERN_C String_t* _stringLiteralD3955C967F7F76B3BBFF699A8F5D6C1439959FE1;
 IL2CPP_EXTERN_C String_t* _stringLiteralD3DAC189C7FB498B0CE53243F71FCB55F176529B;
 IL2CPP_EXTERN_C String_t* _stringLiteralD579F97F4A33C344330AED1285CC5B545618BC19;
+IL2CPP_EXTERN_C String_t* _stringLiteralD5A6D1524A9CAA0C1FE48522BD4B250F6A827CC8;
 IL2CPP_EXTERN_C String_t* _stringLiteralD948D0EC6FE3731BF71BD2C4962076D62079C9BD;
 IL2CPP_EXTERN_C String_t* _stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709;
 IL2CPP_EXTERN_C String_t* _stringLiteralDADD68658FC1E075FAFF255B4DB6734BDB486089;
@@ -17494,40 +17495,40 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LevelMenuManager_Start_m1A1C2679F020ABCE
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:C:/Users/ANKIE/UnityProjects/DisasterDash-trial/Assets/Scripts/LevelMenuManager.cs:22>
+		//<source_info:C:/Users/ANKIE/UnityProjects/DisasterDash-trial/Assets/Scripts/LevelMenuManager.cs:23>
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_0 = __this->___level1Button;
 		LevelMenuManager_SetLevelState_m3A301E20C2FE06420217E7DE47F1BF1AAAE1C4F8(__this, L_0, (bool)1, NULL);
-		//<source_info:C:/Users/ANKIE/UnityProjects/DisasterDash-trial/Assets/Scripts/LevelMenuManager.cs:26>
+		//<source_info:C:/Users/ANKIE/UnityProjects/DisasterDash-trial/Assets/Scripts/LevelMenuManager.cs:27>
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_1 = __this->___level2Button;
 		int32_t L_2;
 		L_2 = PlayerPrefs_GetInt_m8AD1FA8BA54CC6CE2B2AEEE36B6D75587BB1692D(_stringLiteral7BA270DD116D43F48CD027D70820CDA37159BB19, 0, NULL);
 		LevelMenuManager_SetLevelState_m3A301E20C2FE06420217E7DE47F1BF1AAAE1C4F8(__this, L_1, (bool)((((int32_t)L_2) == ((int32_t)1))? 1 : 0), NULL);
-		//<source_info:C:/Users/ANKIE/UnityProjects/DisasterDash-trial/Assets/Scripts/LevelMenuManager.cs:27>
+		//<source_info:C:/Users/ANKIE/UnityProjects/DisasterDash-trial/Assets/Scripts/LevelMenuManager.cs:28>
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_3 = __this->___level3Button;
 		int32_t L_4;
 		L_4 = PlayerPrefs_GetInt_m8AD1FA8BA54CC6CE2B2AEEE36B6D75587BB1692D(_stringLiteral1D3D268E7BE4329DE86A2A8F65F53BAF8D2EFF28, 0, NULL);
 		LevelMenuManager_SetLevelState_m3A301E20C2FE06420217E7DE47F1BF1AAAE1C4F8(__this, L_3, (bool)((((int32_t)L_4) == ((int32_t)1))? 1 : 0), NULL);
-		//<source_info:C:/Users/ANKIE/UnityProjects/DisasterDash-trial/Assets/Scripts/LevelMenuManager.cs:28>
+		//<source_info:C:/Users/ANKIE/UnityProjects/DisasterDash-trial/Assets/Scripts/LevelMenuManager.cs:29>
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_5 = __this->___level4Button;
 		int32_t L_6;
 		L_6 = PlayerPrefs_GetInt_m8AD1FA8BA54CC6CE2B2AEEE36B6D75587BB1692D(_stringLiteral572810390589101AE25CCEB27C12E7D6923B62FB, 0, NULL);
 		LevelMenuManager_SetLevelState_m3A301E20C2FE06420217E7DE47F1BF1AAAE1C4F8(__this, L_5, (bool)((((int32_t)L_6) == ((int32_t)1))? 1 : 0), NULL);
-		//<source_info:C:/Users/ANKIE/UnityProjects/DisasterDash-trial/Assets/Scripts/LevelMenuManager.cs:29>
+		//<source_info:C:/Users/ANKIE/UnityProjects/DisasterDash-trial/Assets/Scripts/LevelMenuManager.cs:30>
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_7 = __this->___level5Button;
 		int32_t L_8;
 		L_8 = PlayerPrefs_GetInt_m8AD1FA8BA54CC6CE2B2AEEE36B6D75587BB1692D(_stringLiteral205CC767556A7141AD0E764E8A743C89FE06CD6A, 0, NULL);
 		LevelMenuManager_SetLevelState_m3A301E20C2FE06420217E7DE47F1BF1AAAE1C4F8(__this, L_7, (bool)((((int32_t)L_8) == ((int32_t)1))? 1 : 0), NULL);
-		//<source_info:C:/Users/ANKIE/UnityProjects/DisasterDash-trial/Assets/Scripts/LevelMenuManager.cs:30>
+		//<source_info:C:/Users/ANKIE/UnityProjects/DisasterDash-trial/Assets/Scripts/LevelMenuManager.cs:31>
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_9 = __this->___level6Button;
 		int32_t L_10;
 		L_10 = PlayerPrefs_GetInt_m8AD1FA8BA54CC6CE2B2AEEE36B6D75587BB1692D(_stringLiteral869B7E59A1C25505491ECEAE1B070AB73257262C, 0, NULL);
 		LevelMenuManager_SetLevelState_m3A301E20C2FE06420217E7DE47F1BF1AAAE1C4F8(__this, L_9, (bool)((((int32_t)L_10) == ((int32_t)1))? 1 : 0), NULL);
-		//<source_info:C:/Users/ANKIE/UnityProjects/DisasterDash-trial/Assets/Scripts/LevelMenuManager.cs:31>
+		//<source_info:C:/Users/ANKIE/UnityProjects/DisasterDash-trial/Assets/Scripts/LevelMenuManager.cs:32>
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_11 = __this->___level7Button;
 		int32_t L_12;
 		L_12 = PlayerPrefs_GetInt_m8AD1FA8BA54CC6CE2B2AEEE36B6D75587BB1692D(_stringLiteral3515B2CFBA1095321F1032EAD4512A37910ED89B, 0, NULL);
 		LevelMenuManager_SetLevelState_m3A301E20C2FE06420217E7DE47F1BF1AAAE1C4F8(__this, L_11, (bool)((((int32_t)L_12) == ((int32_t)1))? 1 : 0), NULL);
-		//<source_info:C:/Users/ANKIE/UnityProjects/DisasterDash-trial/Assets/Scripts/LevelMenuManager.cs:32>
+		//<source_info:C:/Users/ANKIE/UnityProjects/DisasterDash-trial/Assets/Scripts/LevelMenuManager.cs:33>
 		return;
 	}
 }
@@ -17547,7 +17548,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LevelMenuManager_SetLevelState_m3A301E20
 	Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99* G_B6_0 = NULL;
 	Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* G_B6_1 = NULL;
 	{
-		//<source_info:C:/Users/ANKIE/UnityProjects/DisasterDash-trial/Assets/Scripts/LevelMenuManager.cs:36>
+		//<source_info:C:/Users/ANKIE/UnityProjects/DisasterDash-trial/Assets/Scripts/LevelMenuManager.cs:37>
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_0 = ___0_button;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -17558,24 +17559,24 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LevelMenuManager_SetLevelState_m3A301E20
 		}
 	}
 	{
-		//<source_info:C:/Users/ANKIE/UnityProjects/DisasterDash-trial/Assets/Scripts/LevelMenuManager.cs:37>
+		//<source_info:C:/Users/ANKIE/UnityProjects/DisasterDash-trial/Assets/Scripts/LevelMenuManager.cs:38>
 		return;
 	}
 
 IL_000a:
 	{
-		//<source_info:C:/Users/ANKIE/UnityProjects/DisasterDash-trial/Assets/Scripts/LevelMenuManager.cs:39>
+		//<source_info:C:/Users/ANKIE/UnityProjects/DisasterDash-trial/Assets/Scripts/LevelMenuManager.cs:40>
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_2 = ___0_button;
 		bool L_3 = ___1_unlocked;
 		NullCheck(L_2);
 		Selectable_set_interactable_m8DD581C1AD99B2EFA8B3EE9AF69EDDF26688B492(L_2, L_3, NULL);
-		//<source_info:C:/Users/ANKIE/UnityProjects/DisasterDash-trial/Assets/Scripts/LevelMenuManager.cs:41>
+		//<source_info:C:/Users/ANKIE/UnityProjects/DisasterDash-trial/Assets/Scripts/LevelMenuManager.cs:42>
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_4 = ___0_button;
 		NullCheck(L_4);
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_5;
 		L_5 = Component_GetComponent_TisImage_tBC1D03F63BF71132E9A5E472B8742F172A011E7E_mE74EE63C85A63FC34DCFC631BC229207B420BC79(L_4, Component_GetComponent_TisImage_tBC1D03F63BF71132E9A5E472B8742F172A011E7E_mE74EE63C85A63FC34DCFC631BC229207B420BC79_RuntimeMethod_var);
 		V_0 = L_5;
-		//<source_info:C:/Users/ANKIE/UnityProjects/DisasterDash-trial/Assets/Scripts/LevelMenuManager.cs:43>
+		//<source_info:C:/Users/ANKIE/UnityProjects/DisasterDash-trial/Assets/Scripts/LevelMenuManager.cs:44>
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_6 = V_0;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_7;
@@ -17586,7 +17587,7 @@ IL_000a:
 		}
 	}
 	{
-		//<source_info:C:/Users/ANKIE/UnityProjects/DisasterDash-trial/Assets/Scripts/LevelMenuManager.cs:45>
+		//<source_info:C:/Users/ANKIE/UnityProjects/DisasterDash-trial/Assets/Scripts/LevelMenuManager.cs:46>
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_8 = V_0;
 		bool L_9 = ___1_unlocked;
 		if (L_9)
@@ -17618,7 +17619,7 @@ IL_0033:
 
 IL_0038:
 	{
-		//<source_info:C:/Users/ANKIE/UnityProjects/DisasterDash-trial/Assets/Scripts/LevelMenuManager.cs:47>
+		//<source_info:C:/Users/ANKIE/UnityProjects/DisasterDash-trial/Assets/Scripts/LevelMenuManager.cs:48>
 		return;
 	}
 }
@@ -17631,12 +17632,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LevelMenuManager_OpenLevel1_m8D7FD845A68
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&SceneController_tB7F7B89C800597DE2A7040F3D2EFD8824C8043CB_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&SceneManager_tA0EF56A88ACA4A15731AF7FDC10A869FA4C698FA_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral1FA4F0533EA4D7F90D591F424550D18D02858562);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralD3955C967F7F76B3BBFF699A8F5D6C1439959FE1);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralD5A6D1524A9CAA0C1FE48522BD4B250F6A827CC8);
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:C:/Users/ANKIE/UnityProjects/DisasterDash-trial/Assets/Scripts/LevelMenuManager.cs:51>
+		//<source_info:C:/Users/ANKIE/UnityProjects/DisasterDash-trial/Assets/Scripts/LevelMenuManager.cs:52>
 		SceneController_tB7F7B89C800597DE2A7040F3D2EFD8824C8043CB* L_0 = ((SceneController_tB7F7B89C800597DE2A7040F3D2EFD8824C8043CB_StaticFields*)il2cpp_codegen_static_fields_for(SceneController_tB7F7B89C800597DE2A7040F3D2EFD8824C8043CB_il2cpp_TypeInfo_var))->___instance;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -17647,19 +17649,22 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LevelMenuManager_OpenLevel1_m8D7FD845A68
 		}
 	}
 	{
-		//<source_info:C:/Users/ANKIE/UnityProjects/DisasterDash-trial/Assets/Scripts/LevelMenuManager.cs:53>
+		//<source_info:C:/Users/ANKIE/UnityProjects/DisasterDash-trial/Assets/Scripts/LevelMenuManager.cs:54>
 		SceneController_tB7F7B89C800597DE2A7040F3D2EFD8824C8043CB* L_2 = ((SceneController_tB7F7B89C800597DE2A7040F3D2EFD8824C8043CB_StaticFields*)il2cpp_codegen_static_fields_for(SceneController_tB7F7B89C800597DE2A7040F3D2EFD8824C8043CB_il2cpp_TypeInfo_var))->___instance;
 		NullCheck(L_2);
-		SceneController_LoadScene_mB6F9D3C0559CC54B22C6FF6F667B17A520FE205E(L_2, _stringLiteralD3955C967F7F76B3BBFF699A8F5D6C1439959FE1, NULL);
+		SceneController_LoadScene_mB6F9D3C0559CC54B22C6FF6F667B17A520FE205E(L_2, _stringLiteralD5A6D1524A9CAA0C1FE48522BD4B250F6A827CC8, NULL);
 		return;
 	}
 
 IL_001d:
 	{
-		//<source_info:C:/Users/ANKIE/UnityProjects/DisasterDash-trial/Assets/Scripts/LevelMenuManager.cs:57>
+		//<source_info:C:/Users/ANKIE/UnityProjects/DisasterDash-trial/Assets/Scripts/LevelMenuManager.cs:58>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_LogWarning_m33EF1B897E0C7C6FF538989610BFAFFEF4628CA9(_stringLiteral1FA4F0533EA4D7F90D591F424550D18D02858562, NULL);
 		//<source_info:C:/Users/ANKIE/UnityProjects/DisasterDash-trial/Assets/Scripts/LevelMenuManager.cs:59>
+		il2cpp_codegen_runtime_class_init_inline(SceneManager_tA0EF56A88ACA4A15731AF7FDC10A869FA4C698FA_il2cpp_TypeInfo_var);
+		SceneManager_LoadScene_mBB3DBC1601A21F8F4E8A5D68FED30EA9412F218E(_stringLiteralD5A6D1524A9CAA0C1FE48522BD4B250F6A827CC8, NULL);
+		//<source_info:C:/Users/ANKIE/UnityProjects/DisasterDash-trial/Assets/Scripts/LevelMenuManager.cs:61>
 		return;
 	}
 }
@@ -17672,12 +17677,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LevelMenuManager_OpenLevel2_m3322EC366BE
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&SceneController_tB7F7B89C800597DE2A7040F3D2EFD8824C8043CB_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral053C759E96964401233D9713012F3B2C019E261D);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&SceneManager_tA0EF56A88ACA4A15731AF7FDC10A869FA4C698FA_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral1FA4F0533EA4D7F90D591F424550D18D02858562);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral211EEF0C887DA90083B7BA4771F3A4C80D17421F);
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:C:/Users/ANKIE/UnityProjects/DisasterDash-trial/Assets/Scripts/LevelMenuManager.cs:63>
+		//<source_info:C:/Users/ANKIE/UnityProjects/DisasterDash-trial/Assets/Scripts/LevelMenuManager.cs:65>
 		SceneController_tB7F7B89C800597DE2A7040F3D2EFD8824C8043CB* L_0 = ((SceneController_tB7F7B89C800597DE2A7040F3D2EFD8824C8043CB_StaticFields*)il2cpp_codegen_static_fields_for(SceneController_tB7F7B89C800597DE2A7040F3D2EFD8824C8043CB_il2cpp_TypeInfo_var))->___instance;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -17688,19 +17694,22 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LevelMenuManager_OpenLevel2_m3322EC366BE
 		}
 	}
 	{
-		//<source_info:C:/Users/ANKIE/UnityProjects/DisasterDash-trial/Assets/Scripts/LevelMenuManager.cs:65>
+		//<source_info:C:/Users/ANKIE/UnityProjects/DisasterDash-trial/Assets/Scripts/LevelMenuManager.cs:67>
 		SceneController_tB7F7B89C800597DE2A7040F3D2EFD8824C8043CB* L_2 = ((SceneController_tB7F7B89C800597DE2A7040F3D2EFD8824C8043CB_StaticFields*)il2cpp_codegen_static_fields_for(SceneController_tB7F7B89C800597DE2A7040F3D2EFD8824C8043CB_il2cpp_TypeInfo_var))->___instance;
 		NullCheck(L_2);
-		SceneController_LoadScene_mB6F9D3C0559CC54B22C6FF6F667B17A520FE205E(L_2, _stringLiteral053C759E96964401233D9713012F3B2C019E261D, NULL);
+		SceneController_LoadScene_mB6F9D3C0559CC54B22C6FF6F667B17A520FE205E(L_2, _stringLiteral211EEF0C887DA90083B7BA4771F3A4C80D17421F, NULL);
 		return;
 	}
 
 IL_001d:
 	{
-		//<source_info:C:/Users/ANKIE/UnityProjects/DisasterDash-trial/Assets/Scripts/LevelMenuManager.cs:69>
+		//<source_info:C:/Users/ANKIE/UnityProjects/DisasterDash-trial/Assets/Scripts/LevelMenuManager.cs:71>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_LogWarning_m33EF1B897E0C7C6FF538989610BFAFFEF4628CA9(_stringLiteral1FA4F0533EA4D7F90D591F424550D18D02858562, NULL);
-		//<source_info:C:/Users/ANKIE/UnityProjects/DisasterDash-trial/Assets/Scripts/LevelMenuManager.cs:71>
+		//<source_info:C:/Users/ANKIE/UnityProjects/DisasterDash-trial/Assets/Scripts/LevelMenuManager.cs:72>
+		il2cpp_codegen_runtime_class_init_inline(SceneManager_tA0EF56A88ACA4A15731AF7FDC10A869FA4C698FA_il2cpp_TypeInfo_var);
+		SceneManager_LoadScene_mBB3DBC1601A21F8F4E8A5D68FED30EA9412F218E(_stringLiteral211EEF0C887DA90083B7BA4771F3A4C80D17421F, NULL);
+		//<source_info:C:/Users/ANKIE/UnityProjects/DisasterDash-trial/Assets/Scripts/LevelMenuManager.cs:74>
 		return;
 	}
 }
@@ -17713,12 +17722,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LevelMenuManager_OpenLevel3_mB508D944596
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&SceneController_tB7F7B89C800597DE2A7040F3D2EFD8824C8043CB_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&SceneManager_tA0EF56A88ACA4A15731AF7FDC10A869FA4C698FA_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral1FA4F0533EA4D7F90D591F424550D18D02858562);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral3E9113AD0A0B9FCDA81F0B03631BE7AA1542BB59);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral4BD5683A61D2E0939E216209C064CBC33BD06B98);
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:C:/Users/ANKIE/UnityProjects/DisasterDash-trial/Assets/Scripts/LevelMenuManager.cs:75>
+		//<source_info:C:/Users/ANKIE/UnityProjects/DisasterDash-trial/Assets/Scripts/LevelMenuManager.cs:78>
 		SceneController_tB7F7B89C800597DE2A7040F3D2EFD8824C8043CB* L_0 = ((SceneController_tB7F7B89C800597DE2A7040F3D2EFD8824C8043CB_StaticFields*)il2cpp_codegen_static_fields_for(SceneController_tB7F7B89C800597DE2A7040F3D2EFD8824C8043CB_il2cpp_TypeInfo_var))->___instance;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -17729,19 +17739,22 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LevelMenuManager_OpenLevel3_mB508D944596
 		}
 	}
 	{
-		//<source_info:C:/Users/ANKIE/UnityProjects/DisasterDash-trial/Assets/Scripts/LevelMenuManager.cs:77>
+		//<source_info:C:/Users/ANKIE/UnityProjects/DisasterDash-trial/Assets/Scripts/LevelMenuManager.cs:80>
 		SceneController_tB7F7B89C800597DE2A7040F3D2EFD8824C8043CB* L_2 = ((SceneController_tB7F7B89C800597DE2A7040F3D2EFD8824C8043CB_StaticFields*)il2cpp_codegen_static_fields_for(SceneController_tB7F7B89C800597DE2A7040F3D2EFD8824C8043CB_il2cpp_TypeInfo_var))->___instance;
 		NullCheck(L_2);
-		SceneController_LoadScene_mB6F9D3C0559CC54B22C6FF6F667B17A520FE205E(L_2, _stringLiteral3E9113AD0A0B9FCDA81F0B03631BE7AA1542BB59, NULL);
+		SceneController_LoadScene_mB6F9D3C0559CC54B22C6FF6F667B17A520FE205E(L_2, _stringLiteral4BD5683A61D2E0939E216209C064CBC33BD06B98, NULL);
 		return;
 	}
 
 IL_001d:
 	{
-		//<source_info:C:/Users/ANKIE/UnityProjects/DisasterDash-trial/Assets/Scripts/LevelMenuManager.cs:81>
+		//<source_info:C:/Users/ANKIE/UnityProjects/DisasterDash-trial/Assets/Scripts/LevelMenuManager.cs:84>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_LogWarning_m33EF1B897E0C7C6FF538989610BFAFFEF4628CA9(_stringLiteral1FA4F0533EA4D7F90D591F424550D18D02858562, NULL);
-		//<source_info:C:/Users/ANKIE/UnityProjects/DisasterDash-trial/Assets/Scripts/LevelMenuManager.cs:83>
+		//<source_info:C:/Users/ANKIE/UnityProjects/DisasterDash-trial/Assets/Scripts/LevelMenuManager.cs:85>
+		il2cpp_codegen_runtime_class_init_inline(SceneManager_tA0EF56A88ACA4A15731AF7FDC10A869FA4C698FA_il2cpp_TypeInfo_var);
+		SceneManager_LoadScene_mBB3DBC1601A21F8F4E8A5D68FED30EA9412F218E(_stringLiteral4BD5683A61D2E0939E216209C064CBC33BD06B98, NULL);
+		//<source_info:C:/Users/ANKIE/UnityProjects/DisasterDash-trial/Assets/Scripts/LevelMenuManager.cs:87>
 		return;
 	}
 }
@@ -17759,7 +17772,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LevelMenuManager_OpenLevel4_m86D4B9DA1C2
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:C:/Users/ANKIE/UnityProjects/DisasterDash-trial/Assets/Scripts/LevelMenuManager.cs:87>
+		//<source_info:C:/Users/ANKIE/UnityProjects/DisasterDash-trial/Assets/Scripts/LevelMenuManager.cs:91>
 		SceneController_tB7F7B89C800597DE2A7040F3D2EFD8824C8043CB* L_0 = ((SceneController_tB7F7B89C800597DE2A7040F3D2EFD8824C8043CB_StaticFields*)il2cpp_codegen_static_fields_for(SceneController_tB7F7B89C800597DE2A7040F3D2EFD8824C8043CB_il2cpp_TypeInfo_var))->___instance;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -17770,7 +17783,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LevelMenuManager_OpenLevel4_m86D4B9DA1C2
 		}
 	}
 	{
-		//<source_info:C:/Users/ANKIE/UnityProjects/DisasterDash-trial/Assets/Scripts/LevelMenuManager.cs:89>
+		//<source_info:C:/Users/ANKIE/UnityProjects/DisasterDash-trial/Assets/Scripts/LevelMenuManager.cs:93>
 		SceneController_tB7F7B89C800597DE2A7040F3D2EFD8824C8043CB* L_2 = ((SceneController_tB7F7B89C800597DE2A7040F3D2EFD8824C8043CB_StaticFields*)il2cpp_codegen_static_fields_for(SceneController_tB7F7B89C800597DE2A7040F3D2EFD8824C8043CB_il2cpp_TypeInfo_var))->___instance;
 		NullCheck(L_2);
 		SceneController_LoadScene_mB6F9D3C0559CC54B22C6FF6F667B17A520FE205E(L_2, _stringLiteral3B5D6DAED143B773D3CA20F84F6F332B4D3D3F66, NULL);
@@ -17779,10 +17792,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LevelMenuManager_OpenLevel4_m86D4B9DA1C2
 
 IL_001d:
 	{
-		//<source_info:C:/Users/ANKIE/UnityProjects/DisasterDash-trial/Assets/Scripts/LevelMenuManager.cs:93>
+		//<source_info:C:/Users/ANKIE/UnityProjects/DisasterDash-trial/Assets/Scripts/LevelMenuManager.cs:97>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_LogWarning_m33EF1B897E0C7C6FF538989610BFAFFEF4628CA9(_stringLiteral1FA4F0533EA4D7F90D591F424550D18D02858562, NULL);
-		//<source_info:C:/Users/ANKIE/UnityProjects/DisasterDash-trial/Assets/Scripts/LevelMenuManager.cs:95>
+		//<source_info:C:/Users/ANKIE/UnityProjects/DisasterDash-trial/Assets/Scripts/LevelMenuManager.cs:99>
 		return;
 	}
 }
@@ -17800,7 +17813,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LevelMenuManager_OpenLevel5_mC71D28146CA
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:C:/Users/ANKIE/UnityProjects/DisasterDash-trial/Assets/Scripts/LevelMenuManager.cs:99>
+		//<source_info:C:/Users/ANKIE/UnityProjects/DisasterDash-trial/Assets/Scripts/LevelMenuManager.cs:103>
 		SceneController_tB7F7B89C800597DE2A7040F3D2EFD8824C8043CB* L_0 = ((SceneController_tB7F7B89C800597DE2A7040F3D2EFD8824C8043CB_StaticFields*)il2cpp_codegen_static_fields_for(SceneController_tB7F7B89C800597DE2A7040F3D2EFD8824C8043CB_il2cpp_TypeInfo_var))->___instance;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -17811,7 +17824,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LevelMenuManager_OpenLevel5_mC71D28146CA
 		}
 	}
 	{
-		//<source_info:C:/Users/ANKIE/UnityProjects/DisasterDash-trial/Assets/Scripts/LevelMenuManager.cs:101>
+		//<source_info:C:/Users/ANKIE/UnityProjects/DisasterDash-trial/Assets/Scripts/LevelMenuManager.cs:105>
 		SceneController_tB7F7B89C800597DE2A7040F3D2EFD8824C8043CB* L_2 = ((SceneController_tB7F7B89C800597DE2A7040F3D2EFD8824C8043CB_StaticFields*)il2cpp_codegen_static_fields_for(SceneController_tB7F7B89C800597DE2A7040F3D2EFD8824C8043CB_il2cpp_TypeInfo_var))->___instance;
 		NullCheck(L_2);
 		SceneController_LoadScene_mB6F9D3C0559CC54B22C6FF6F667B17A520FE205E(L_2, _stringLiteral7FF702703E7FAA946ADC2FD0330981467BCE94D1, NULL);
@@ -17820,10 +17833,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LevelMenuManager_OpenLevel5_mC71D28146CA
 
 IL_001d:
 	{
-		//<source_info:C:/Users/ANKIE/UnityProjects/DisasterDash-trial/Assets/Scripts/LevelMenuManager.cs:105>
+		//<source_info:C:/Users/ANKIE/UnityProjects/DisasterDash-trial/Assets/Scripts/LevelMenuManager.cs:109>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_LogWarning_m33EF1B897E0C7C6FF538989610BFAFFEF4628CA9(_stringLiteral1FA4F0533EA4D7F90D591F424550D18D02858562, NULL);
-		//<source_info:C:/Users/ANKIE/UnityProjects/DisasterDash-trial/Assets/Scripts/LevelMenuManager.cs:107>
+		//<source_info:C:/Users/ANKIE/UnityProjects/DisasterDash-trial/Assets/Scripts/LevelMenuManager.cs:111>
 		return;
 	}
 }
@@ -17841,7 +17854,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LevelMenuManager_OpenLevel6_m3C937006B4E
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:C:/Users/ANKIE/UnityProjects/DisasterDash-trial/Assets/Scripts/LevelMenuManager.cs:111>
+		//<source_info:C:/Users/ANKIE/UnityProjects/DisasterDash-trial/Assets/Scripts/LevelMenuManager.cs:115>
 		SceneController_tB7F7B89C800597DE2A7040F3D2EFD8824C8043CB* L_0 = ((SceneController_tB7F7B89C800597DE2A7040F3D2EFD8824C8043CB_StaticFields*)il2cpp_codegen_static_fields_for(SceneController_tB7F7B89C800597DE2A7040F3D2EFD8824C8043CB_il2cpp_TypeInfo_var))->___instance;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -17852,7 +17865,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LevelMenuManager_OpenLevel6_m3C937006B4E
 		}
 	}
 	{
-		//<source_info:C:/Users/ANKIE/UnityProjects/DisasterDash-trial/Assets/Scripts/LevelMenuManager.cs:113>
+		//<source_info:C:/Users/ANKIE/UnityProjects/DisasterDash-trial/Assets/Scripts/LevelMenuManager.cs:117>
 		SceneController_tB7F7B89C800597DE2A7040F3D2EFD8824C8043CB* L_2 = ((SceneController_tB7F7B89C800597DE2A7040F3D2EFD8824C8043CB_StaticFields*)il2cpp_codegen_static_fields_for(SceneController_tB7F7B89C800597DE2A7040F3D2EFD8824C8043CB_il2cpp_TypeInfo_var))->___instance;
 		NullCheck(L_2);
 		SceneController_LoadScene_mB6F9D3C0559CC54B22C6FF6F667B17A520FE205E(L_2, _stringLiteral7A5DECD2AF605B1E0F43131C29FBA672467FED69, NULL);
@@ -17861,10 +17874,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LevelMenuManager_OpenLevel6_m3C937006B4E
 
 IL_001d:
 	{
-		//<source_info:C:/Users/ANKIE/UnityProjects/DisasterDash-trial/Assets/Scripts/LevelMenuManager.cs:117>
+		//<source_info:C:/Users/ANKIE/UnityProjects/DisasterDash-trial/Assets/Scripts/LevelMenuManager.cs:121>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_LogWarning_m33EF1B897E0C7C6FF538989610BFAFFEF4628CA9(_stringLiteral1FA4F0533EA4D7F90D591F424550D18D02858562, NULL);
-		//<source_info:C:/Users/ANKIE/UnityProjects/DisasterDash-trial/Assets/Scripts/LevelMenuManager.cs:119>
+		//<source_info:C:/Users/ANKIE/UnityProjects/DisasterDash-trial/Assets/Scripts/LevelMenuManager.cs:123>
 		return;
 	}
 }
@@ -17882,7 +17895,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LevelMenuManager_OpenLevel7_mF4CA7550984
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:C:/Users/ANKIE/UnityProjects/DisasterDash-trial/Assets/Scripts/LevelMenuManager.cs:123>
+		//<source_info:C:/Users/ANKIE/UnityProjects/DisasterDash-trial/Assets/Scripts/LevelMenuManager.cs:127>
 		SceneController_tB7F7B89C800597DE2A7040F3D2EFD8824C8043CB* L_0 = ((SceneController_tB7F7B89C800597DE2A7040F3D2EFD8824C8043CB_StaticFields*)il2cpp_codegen_static_fields_for(SceneController_tB7F7B89C800597DE2A7040F3D2EFD8824C8043CB_il2cpp_TypeInfo_var))->___instance;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -17893,7 +17906,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LevelMenuManager_OpenLevel7_mF4CA7550984
 		}
 	}
 	{
-		//<source_info:C:/Users/ANKIE/UnityProjects/DisasterDash-trial/Assets/Scripts/LevelMenuManager.cs:125>
+		//<source_info:C:/Users/ANKIE/UnityProjects/DisasterDash-trial/Assets/Scripts/LevelMenuManager.cs:129>
 		SceneController_tB7F7B89C800597DE2A7040F3D2EFD8824C8043CB* L_2 = ((SceneController_tB7F7B89C800597DE2A7040F3D2EFD8824C8043CB_StaticFields*)il2cpp_codegen_static_fields_for(SceneController_tB7F7B89C800597DE2A7040F3D2EFD8824C8043CB_il2cpp_TypeInfo_var))->___instance;
 		NullCheck(L_2);
 		SceneController_LoadScene_mB6F9D3C0559CC54B22C6FF6F667B17A520FE205E(L_2, _stringLiteral6BC4F5147E775005783CB4F73FF54674DB13D8F8, NULL);
@@ -17902,10 +17915,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LevelMenuManager_OpenLevel7_mF4CA7550984
 
 IL_001d:
 	{
-		//<source_info:C:/Users/ANKIE/UnityProjects/DisasterDash-trial/Assets/Scripts/LevelMenuManager.cs:129>
+		//<source_info:C:/Users/ANKIE/UnityProjects/DisasterDash-trial/Assets/Scripts/LevelMenuManager.cs:133>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_LogWarning_m33EF1B897E0C7C6FF538989610BFAFFEF4628CA9(_stringLiteral1FA4F0533EA4D7F90D591F424550D18D02858562, NULL);
-		//<source_info:C:/Users/ANKIE/UnityProjects/DisasterDash-trial/Assets/Scripts/LevelMenuManager.cs:131>
+		//<source_info:C:/Users/ANKIE/UnityProjects/DisasterDash-trial/Assets/Scripts/LevelMenuManager.cs:135>
 		return;
 	}
 }
