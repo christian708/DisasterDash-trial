@@ -27,6 +27,9 @@ public class StoryWan : MonoBehaviour, IPointerClickHandler
 
     public void OnPointerClick(PointerEventData eventData)
     {
+        if (AudioManager.Instance != null)
+            AudioManager.Instance.PlayTapSound();
+
         currentIndex++;
 
         if (currentIndex >= activeSlides.Length)

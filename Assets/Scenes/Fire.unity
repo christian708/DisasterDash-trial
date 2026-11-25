@@ -261,7 +261,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4216482563844945540, guid: ac8dd2a2c053c1145a9389055e8af31e, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 900
+      value: 800
       objectReference: {fileID: 0}
     - target: {fileID: 4216482563844945540, guid: ac8dd2a2c053c1145a9389055e8af31e, type: 3}
       propertyPath: m_SizeDelta.y
@@ -513,8 +513,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::StoryTu
   storyImage: {fileID: 953982777}
-  boySlide1: {fileID: -5567757804934692330, guid: a48951aac18b8b543b81c466e2fc6262, type: 3}
-  girlSlide1: {fileID: -403472515961399636, guid: ab2416032d20e2e4d80e9f4cd53a2b94, type: 3}
+  boySlide1: {fileID: -8897641548139577886, guid: 572007d085761c7459824ea767fbd18b, type: 3}
+  girlSlide1: {fileID: 4662337155233166570, guid: 54a0a9e9f88ce7d4ab3cadddb8d9d259, type: 3}
   sharedSlide2: {fileID: -6193600312916591710, guid: 08e2072c72e4dba47a84fddc416cf57a, type: 3}
   nextSceneName: Level0_Fire_interior
 --- !u!114 &953982777

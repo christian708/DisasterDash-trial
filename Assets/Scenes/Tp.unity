@@ -641,7 +641,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4216482563844945540, guid: ac8dd2a2c053c1145a9389055e8af31e, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 48
+      value: 55
       objectReference: {fileID: 0}
     - target: {fileID: 4216482563844945540, guid: ac8dd2a2c053c1145a9389055e8af31e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -670,6 +670,6 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 816121587}
-  - {fileID: 1321398711}
   - {fileID: 875191942}
   - {fileID: 1306401983}
+  - {fileID: 1321398711}

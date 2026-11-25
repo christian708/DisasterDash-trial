@@ -1,0 +1,624 @@
+fileFormatVersion: 2
+guid: 7a324dc2ec1f0e44a944b869983860ad
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3948311261080744189
+    second: kmf_0
+  - first:
+      213: -3701124382606453480
+    second: kmf_1
+  - first:
+      213: -882815945917420041
+    second: kmf_2
+  - first:
+      213: -4224758368235847469
+    second: kmf_3
+  - first:
+      213: -5152230372070622978
+    second: kmf_4
+  - first:
+      213: 6752617402278388441
+    second: kmf_5
+  - first:
+      213: -5860154182697686162
+    second: kmf_6
+  - first:
+      213: 1627584819347369325
+    second: kmf_7
+  - first:
+      213: 1328014747563148659
+    second: kmf_8
+  - first:
+      213: 6326738244720410432
+    second: kmf_9
+  - first:
+      213: -3780756775346570122
+    second: kmf_10
+  - first:
+      213: -1322108271357613820
+    second: kmf_11
+  - first:
+      213: 7382141803658296579
+    second: kmf_12
+  - first:
+      213: -2066594094921550283
+    second: kmf_13
+  - first:
+      213: -9151095677000251891
+    second: kmf_14
+  - first:
+      213: -6395694578458011340
+    second: kmf_15
+  - first:
+      213: 5051653859564085224
+    second: kmf_16
+  - first:
+      213: 6977539848087672879
+    second: kmf_17
+  - first:
+      213: 4834120868756914250
+    second: kmf_18
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: kmf_0
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 215
+        width: 1539
+        height: 706
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30f8b9cb3d7c439c0800000000000000
+      internalID: -3948311261080744189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kmf_1
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 579
+        width: 116
+        height: 178
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8159431cbf6f2acc0800000000000000
+      internalID: -3701124382606453480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kmf_2
+      rect:
+        serializedVersion: 2
+        x: 489
+        y: 590
+        width: 117
+        height: 178
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7fdaa85139b9fb3f0800000000000000
+      internalID: -882815945917420041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kmf_3
+      rect:
+        serializedVersion: 2
+        x: 619
+        y: 572
+        width: 129
+        height: 199
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d08177d5a4ae55c0800000000000000
+      internalID: -4224758368235847469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kmf_4
+      rect:
+        serializedVersion: 2
+        x: 837
+        y: 593
+        width: 172
+        height: 188
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef870c736c99f78b0800000000000000
+      internalID: -5152230372070622978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kmf_5
+      rect:
+        serializedVersion: 2
+        x: 1016
+        y: 636
+        width: 142
+        height: 175
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d2acee10cd16bd50800000000000000
+      internalID: 6752617402278388441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kmf_6
+      rect:
+        serializedVersion: 2
+        x: 1164
+        y: 635
+        width: 140
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6be84bb1dc8caea0800000000000000
+      internalID: -5860154182697686162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kmf_7
+      rect:
+        serializedVersion: 2
+        x: 1321
+        y: 650
+        width: 51
+        height: 174
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6da40715c7569610800000000000000
+      internalID: 1627584819347369325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kmf_8
+      rect:
+        serializedVersion: 2
+        x: 1393
+        y: 633
+        width: 128
+        height: 197
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3754bf4706e0e6210800000000000000
+      internalID: 1328014747563148659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kmf_9
+      rect:
+        serializedVersion: 2
+        x: 1535
+        y: 682
+        width: 141
+        height: 179
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04f307fb9e61dc750800000000000000
+      internalID: 6326738244720410432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kmf_10
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 231
+        width: 118
+        height: 193
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67cf05f7ebd088bc0800000000000000
+      internalID: -3780756775346570122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kmf_11
+      rect:
+        serializedVersion: 2
+        x: 533
+        y: 267
+        width: 141
+        height: 174
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 409af13388de6ade0800000000000000
+      internalID: -1322108271357613820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kmf_12
+      rect:
+        serializedVersion: 2
+        x: 690
+        y: 248
+        width: 139
+        height: 191
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30d3d90bbd2a27660800000000000000
+      internalID: 7382141803658296579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kmf_13
+      rect:
+        serializedVersion: 2
+        x: 831
+        y: 277
+        width: 177
+        height: 171
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 536f745be9bf153e0800000000000000
+      internalID: -2066594094921550283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kmf_14
+      rect:
+        serializedVersion: 2
+        x: 1025
+        y: 286
+        width: 125
+        height: 192
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d0689c267f6c00180800000000000000
+      internalID: -9151095677000251891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kmf_15
+      rect:
+        serializedVersion: 2
+        x: 1159
+        y: 288
+        width: 139
+        height: 191
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4395e1faaaded37a0800000000000000
+      internalID: -6395694578458011340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kmf_16
+      rect:
+        serializedVersion: 2
+        x: 1301
+        y: 333
+        width: 126
+        height: 169
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ef5c83ab641b1640800000000000000
+      internalID: 5051653859564085224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kmf_17
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 398
+        width: 60
+        height: 180
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f281663f58335d060800000000000000
+      internalID: 6977539848087672879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kmf_18
+      rect:
+        serializedVersion: 2
+        x: 1514
+        y: 338
+        width: 51
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a400f8f515f361340800000000000000
+      internalID: 4834120868756914250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 26c708ef2f4e9c34e85a8ad022adb786
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      kmf_0: -3948311261080744189
+      kmf_1: -3701124382606453480
+      kmf_10: -3780756775346570122
+      kmf_11: -1322108271357613820
+      kmf_12: 7382141803658296579
+      kmf_13: -2066594094921550283
+      kmf_14: -9151095677000251891
+      kmf_15: -6395694578458011340
+      kmf_16: 5051653859564085224
+      kmf_17: 6977539848087672879
+      kmf_18: 4834120868756914250
+      kmf_2: -882815945917420041
+      kmf_3: -4224758368235847469
+      kmf_4: -5152230372070622978
+      kmf_5: 6752617402278388441
+      kmf_6: -5860154182697686162
+      kmf_7: 1627584819347369325
+      kmf_8: 1328014747563148659
+      kmf_9: 6326738244720410432
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,598 @@
+fileFormatVersion: 2
+guid: 8e66579478022684b8f91cac02da4512
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3970822392133524811
+    second: SQUEEZE_0
+  - first:
+      213: 6048051859431003239
+    second: SQUEEZE_1
+  - first:
+      213: -7134455121284405499
+    second: SQUEEZE_2
+  - first:
+      213: -456726621532956877
+    second: SQUEEZE_3
+  - first:
+      213: -1221699696165683452
+    second: SQUEEZE_4
+  - first:
+      213: 4525596111718337874
+    second: SQUEEZE_5
+  - first:
+      213: 7213093437688139482
+    second: SQUEEZE_6
+  - first:
+      213: 7253501989977666137
+    second: SQUEEZE_7
+  - first:
+      213: -4998270967659422617
+    second: SQUEEZE_8
+  - first:
+      213: -4642333509204053739
+    second: SQUEEZE_9
+  - first:
+      213: 8109061144520155778
+    second: SQUEEZE_10
+  - first:
+      213: 1378368157475893543
+    second: SQUEEZE_11
+  - first:
+      213: 7399284770654290687
+    second: SQUEEZE_12
+  - first:
+      213: -2127656005601764753
+    second: SQUEEZE_13
+  - first:
+      213: 7318660072239871220
+    second: SQUEEZE_14
+  - first:
+      213: -8241789315664193004
+    second: SQUEEZE_15
+  - first:
+      213: 4126686942318024801
+    second: SQUEEZE_16
+  - first:
+      213: 5613942798372563055
+    second: SQUEEZE_17
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: SQUEEZE_0
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 851
+        width: 269
+        height: 143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b2e6ba921ec4e8c0800000000000000
+      internalID: -3970822392133524811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SQUEEZE_1
+      rect:
+        serializedVersion: 2
+        x: 507
+        y: 849
+        width: 271
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76496884f1ffee350800000000000000
+      internalID: 6048051859431003239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SQUEEZE_2
+      rect:
+        serializedVersion: 2
+        x: 837
+        y: 852
+        width: 270
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50760edfdd25dfc90800000000000000
+      internalID: -7134455121284405499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SQUEEZE_3
+      rect:
+        serializedVersion: 2
+        x: 1168
+        y: 851
+        width: 272
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 337501cbe8169a9f0800000000000000
+      internalID: -456726621532956877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SQUEEZE_4
+      rect:
+        serializedVersion: 2
+        x: 1499
+        y: 853
+        width: 272
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40f77d36996ab0fe0800000000000000
+      internalID: -1221699696165683452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SQUEEZE_5
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 708
+        width: 275
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25d4cdb9fa52ece30800000000000000
+      internalID: 4525596111718337874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SQUEEZE_6
+      rect:
+        serializedVersion: 2
+        x: 506
+        y: 708
+        width: 277
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ade4a15d34e0a1460800000000000000
+      internalID: 7213093437688139482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SQUEEZE_7
+      rect:
+        serializedVersion: 2
+        x: 837
+        y: 708
+        width: 286
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 952353211ad99a460800000000000000
+      internalID: 7253501989977666137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SQUEEZE_8
+      rect:
+        serializedVersion: 2
+        x: 1168
+        y: 708
+        width: 286
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76c1381790392aab0800000000000000
+      internalID: -4998270967659422617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SQUEEZE_9
+      rect:
+        serializedVersion: 2
+        x: 1499
+        y: 709
+        width: 249
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 511fffef44e139fb0800000000000000
+      internalID: -4642333509204053739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SQUEEZE_10
+      rect:
+        serializedVersion: 2
+        x: 1716
+        y: 780
+        width: 80
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 282eb05b52c298070800000000000000
+      internalID: 8109061144520155778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SQUEEZE_11
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 562
+        width: 254
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7217f0c4982f02310800000000000000
+      internalID: 1378368157475893543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SQUEEZE_12
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 647
+        width: 64
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff28ecabb4a8fa660800000000000000
+      internalID: 7399284770654290687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SQUEEZE_13
+      rect:
+        serializedVersion: 2
+        x: 507
+        y: 420
+        width: 269
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6a51edb22c0972e0800000000000000
+      internalID: -2127656005601764753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SQUEEZE_14
+      rect:
+        serializedVersion: 2
+        x: 837
+        y: 420
+        width: 267
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f431bd4f8a119560800000000000000
+      internalID: 7318660072239871220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SQUEEZE_15
+      rect:
+        serializedVersion: 2
+        x: 1168
+        y: 420
+        width: 277
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41ad936c8484f9d80800000000000000
+      internalID: -8241789315664193004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SQUEEZE_16
+      rect:
+        serializedVersion: 2
+        x: 1499
+        y: 420
+        width: 273
+        height: 275
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 168db10f8efe44930800000000000000
+      internalID: 4126686942318024801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SQUEEZE_17
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 420
+        width: 266
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f68eb5e2b3bb8ed40800000000000000
+      internalID: 5613942798372563055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      SQUEEZE_0: -3970822392133524811
+      SQUEEZE_1: 6048051859431003239
+      SQUEEZE_10: 8109061144520155778
+      SQUEEZE_11: 1378368157475893543
+      SQUEEZE_12: 7399284770654290687
+      SQUEEZE_13: -2127656005601764753
+      SQUEEZE_14: 7318660072239871220
+      SQUEEZE_15: -8241789315664193004
+      SQUEEZE_16: 4126686942318024801
+      SQUEEZE_17: 5613942798372563055
+      SQUEEZE_2: -7134455121284405499
+      SQUEEZE_3: -456726621532956877
+      SQUEEZE_4: -1221699696165683452
+      SQUEEZE_5: 4525596111718337874
+      SQUEEZE_6: 7213093437688139482
+      SQUEEZE_7: 7253501989977666137
+      SQUEEZE_8: -4998270967659422617
+      SQUEEZE_9: -4642333509204053739
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

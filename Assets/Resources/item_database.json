@@ -8,6 +8,12 @@
             "requiredTargetTag": "Fire"
         },
         {
+            "itemId": "machete",
+            "itemName": "Machete",
+            "description": "<b><size=120%>Effective:</size></b>\n- Cutting through dense vegetation\n- Self-defense in emergency situations",
+            "requiredTargetTag": "Vegetation"
+        },
+        {
             "itemId": "towel",
             "itemName": "Towel",
             "description": "<b><size=120%>Effective:</size></b>\n- Small spills\n- Wet surfaces\n- Gas leak fire",
@@ -20,7 +26,7 @@
             "requiredTargetTag": ""
         },
         {
-            "itemId": "mask_45",
+            "itemId": "mask45",
             "itemName": "45 Mask",
             "description": "<b><size=120%>Effective:</size></b>\n- Filtering dust particles\n- Reducing exposure to airborne particles",
             "requiredTargetTag": ""
@@ -32,21 +38,9 @@
             "requiredTargetTag": ""
         },
         {
-            "itemId": "coat",
-            "itemName": "Coat",
+            "itemId": "raincoat",
+            "itemName": "Raincoat",
             "description": "<b><size=120%>Effective:</size></b>\n- Protection from heavy rain\n- Staying dry during storms",
-            "requiredTargetTag": ""
-        },
-        {
-            "itemId": "gloves",
-            "itemName": "Gloves",
-            "description": "<b><size=120%>Effective:</size></b>\n- Protecting hands from dirt and minor hazards\n- Handling safe objects during rescue",
-            "requiredTargetTag": ""
-        },
-        {
-            "itemId": "goggles",
-            "itemName": "Goggles",
-            "description": "<b><size=120%>Effective:</size></b>\n- Protecting eyes from dust\n- Shielding eyes from flying debris",
             "requiredTargetTag": ""
         },
         {

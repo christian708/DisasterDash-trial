@@ -22,8 +22,8 @@ static const int32_t s_InvokerIndices[4] =
 {
 	16951,
 	12776,
-	27060,
-	27030,
+	27061,
+	27031,
 };
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_UnityEngine_SpriteMaskModule_CodeGenModule;
 const Il2CppCodeGenModule g_UnityEngine_SpriteMaskModule_CodeGenModule = 

@@ -2,8 +2,9 @@ using UnityEngine;
 
 /// <summary>
 /// Put this on the Player GameObject. Tracks what item is currently "in hand"
-/// between the A (pickup) and B (use) button presses. Your B-button script
-/// should call TryUseOnNearbyTarget(nearbyTargetGameObject) when B is pressed.
+/// between the B (pickup) and A (use) button presses.
+/// Wearables (coat, boots, helmet, shoe, mask) are never held; they live in InventoryManager.
+/// Using items on world targets is handled by the target itself (UseTarget, TreeUseTarget).
 /// </summary>
 public class PlayerHeldItem : MonoBehaviour
 {
@@ -32,6 +33,12 @@ public class PlayerHeldItem : MonoBehaviour
 
     public void PickUp(string itemId, string itemName, string requiredTargetTag)
     {
+        // Wearables never go in the hand / left box.
+        if (InventoryManager.Instance != null && InventoryManager.Instance.IsWearable(itemId))
+        {
+            return;
+        }
+
         IsHoldingItem = true;
         HeldItemId = itemId;
         HeldItemName = itemName;

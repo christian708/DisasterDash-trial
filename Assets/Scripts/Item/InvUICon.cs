@@ -56,10 +56,12 @@ public class InvUICon : MonoBehaviour
         foreach (InventoryItemData item in InventoryManager.Instance.Items)
         {
             ItemDefinition def = ItemDatabase.Instance.GetDefinition(item.itemId);
-            Sprite icon = def != null ? def.icon : null;
+
+            // Skip items that no longer exist in the database (removed goggles/gloves)
+            if (def == null) continue;
 
             ItemSlotUI slot = Instantiate(slotPrefab, slotsParent);
-            slot.Setup(item.itemId, item.quantity, icon, item.pickedUp);
+            slot.Setup(item.itemId, item.quantity, def.icon, item.pickedUp);
         }
     }
 
@@ -99,5 +101,5 @@ public class InvUICon : MonoBehaviour
         {
             invSceneNav.CloseBag();
         }
-    }   
+    }
 }

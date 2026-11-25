@@ -13,9 +13,27 @@ public class InventoryManager : MonoBehaviour
 
     public List<InventoryItemData> Items { get; private set; } = new List<InventoryItemData>();
 
+    // Currently held item (fire extinguisher, towel, bucket...). Wearables never go in here.
     public string EquippedItemId { get; private set; }
     public string EquippedItemName { get; private set; }
     public string EquippedItemRequiredTargetTag { get; private set; }
+
+    // Wearables: max 2 can be equipped at the same time.
+    // IDs must match the itemId values in item_database.json exactly.
+    // NOTE: Unity keeps the old list on an existing component, so also check it in the Inspector.
+    [SerializeField]
+    private List<string> wearableItemIds = new List<string>
+    {
+        "raincoat", "boots", "helmet", "shoe", "mask", "mask45", "lifevest"
+    };
+
+    private const int MaxWearables = 2;
+
+    // Kept in equip order, so the oldest one is at index 0.
+    private readonly List<string> equippedWearables = new List<string>();
+
+    public IReadOnlyList<string> WearableItemIds => wearableItemIds;
+    public int WearablesVersion { get; private set; }
 
     public event Action<InventoryItemData> OnItemAdded;
     public event Action<string> OnItemRemoved;
@@ -40,11 +58,6 @@ public class InventoryManager : MonoBehaviour
         EnsureFullRoster();
     }
 
-    /// <summary>
-    /// Makes sure every item defined in ItemDatabase has an entry here (even if
-    /// pickedUp = false), so locked/unpicked items can still show as greyed-out
-    /// slots in the UI. Runs in Start() so ItemDatabase's Awake has already loaded.
-    /// </summary>
     private void EnsureFullRoster()
     {
         if (ItemDatabase.Instance == null) return;
@@ -90,16 +103,48 @@ public class InventoryManager : MonoBehaviour
         return Items.Exists(i => i.itemId == itemId);
     }
 
+    public bool IsWearable(string itemId)
+    {
+        return !string.IsNullOrEmpty(itemId) && wearableItemIds.Contains(itemId);
+    }
+
+    public bool IsWearableEquipped(string itemId)
+    {
+        return equippedWearables.Contains(itemId);
+    }
+
+    /// <summary>
+    /// True if the item is an equipped wearable, or is the currently held item.
+    /// Use this in hazard scripts instead of comparing EquippedItemId / HeldItemId.
+    /// </summary>
+    public bool IsEquipped(string itemId)
+    {
+        if (string.IsNullOrEmpty(itemId)) return false;
+        return equippedWearables.Contains(itemId) || EquippedItemId == itemId;
+    }
+
     public void SetEquippedItem(string itemId, string itemName, string requiredTargetTag)
     {
+        // Wearables go into their own list (max 2) and never touch the held item.
+        if (IsWearable(itemId))
+        {
+            if (equippedWearables.Contains(itemId)) return; // already worn
+
+            if (equippedWearables.Count >= MaxWearables)
+            {
+                equippedWearables.RemoveAt(0); // take off the oldest one
+            }
+
+            equippedWearables.Add(itemId);
+            WearablesVersion++;
+            return;
+        }
+
         EquippedItemId = itemId;
         EquippedItemName = itemName;
         EquippedItemRequiredTargetTag = requiredTargetTag;
 
-        // Keep PlayerHeldItem in sync the moment an item is equipped, instead of
-        // only picking it up once at scene Start(). Without this, using an item
-        // on a UseTarget after equipping it mid-scene silently fails because
-        // PlayerHeldItem.HeldItemId never gets updated.
+        // Keep PlayerHeldItem in sync the moment an item is equipped.
         if (PlayerHeldItem.Instance != null)
         {
             PlayerHeldItem.Instance.PickUp(itemId, itemName, requiredTargetTag);
@@ -107,8 +152,8 @@ public class InventoryManager : MonoBehaviour
     }
 
     /// <summary>
-    /// Call this when un-equipping / deselecting an item in the UI, so
-    /// PlayerHeldItem doesn't keep pointing at a stale item.
+    /// Clears the held item only (fire extinguisher, towel, bucket...).
+    /// Wearables stay on; use UnequipWearable to take one off.
     /// </summary>
     public void ClearEquippedItem()
     {
@@ -123,12 +168,22 @@ public class InventoryManager : MonoBehaviour
     }
 
     /// <summary>
+    /// Take off one specific wearable without touching the other.
+    /// </summary>
+    public void UnequipWearable(string itemId)
+    {
+        if (equippedWearables.Remove(itemId)) WearablesVersion++;
+    }
+
+    /// <summary>
     /// Call this from your New Game flow (alongside ResetProgressPlayerPrefs())
     /// to wipe all picked-up items back to locked/greyed-out.
     /// </summary>
     public void ResetInventory()
     {
         Items.Clear();
+        equippedWearables.Clear();
+        WearablesVersion++;
         EquippedItemId = null;
         EquippedItemName = null;
         EquippedItemRequiredTargetTag = null;
@@ -146,6 +201,7 @@ public class InventoryManager : MonoBehaviour
         if (existing.quantity <= 0)
         {
             Items.Remove(existing);
+            if (equippedWearables.Remove(itemId)) WearablesVersion++;
         }
 
         SaveInventory();

@@ -97,6 +97,7 @@ MonoBehaviour:
   recedeDuration: 0.5
   waterVisual: {fileID: 7071285819340543746}
   playerSpeedMultiplier: 0.5
+  bootsItemId: boots
 --- !u!1 &8559313585087844679
 GameObject:
   m_ObjectHideFlags: 0
@@ -176,7 +177,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 4
   m_MaskInteraction: 0
   m_Sprite: {fileID: 906997432504936578, guid: d18960d108d6cdc4da61e59157332cec, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

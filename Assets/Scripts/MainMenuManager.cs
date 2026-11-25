@@ -14,8 +14,30 @@ public class MainMenuManager : MonoBehaviour
 
     private void Start()
     {
-        // Continue stays interactable either way - falls back to Character Select
-        // if there's no save yet (see OnContinuePressed).
+        RefreshContinueButton();
+    }
+
+    /// <summary>
+    /// Continue is available if there is a save file OR any level has been completed.
+    /// Without either, the player has no progress to continue from.
+    /// </summary>
+    private void RefreshContinueButton()
+    {
+        if (continueButton == null) return;
+
+        bool hasSave = SaveSystem.SaveExists();
+
+        bool hasProgress = false;
+        for (int i = 1; i <= 7; i++)
+        {
+            if (PlayerPrefs.GetInt("Level" + i + "Completed", 0) == 1)
+            {
+                hasProgress = true;
+                break;
+            }
+        }
+
+        continueButton.interactable = hasSave || hasProgress;
     }
 
     public void OnNewGamePressed()
@@ -28,6 +50,12 @@ public class MainMenuManager : MonoBehaviour
         // Reset PlayerPrefs progress flags (level unlocks, completion, etc.)
         ResetProgressPlayerPrefs();
 
+        // Reset collected stars
+        StarManager.ResetAll();
+
+        // Reset carried-over health
+        HealthCarry.Reset();
+
         // Reset inventory - all items back to locked/greyed-out
         if (InventoryManager.Instance != null)
         {
@@ -35,13 +63,16 @@ public class MainMenuManager : MonoBehaviour
         }
         else
         {
-    Debug.LogWarning("[MainMenuManager] InventoryManager.Instance is NULL - inventory not reset!");
+            Debug.LogWarning("[MainMenuManager] InventoryManager.Instance is NULL - inventory not reset!");
         }
+
         SceneManager.LoadScene(characterSelectScene);
     }
 
     public void OnContinuePressed()
     {
+        HealthCarry.Reset();
+
         if (SaveSystem.SaveExists())
         {
             SaveData data = SaveSystem.Load();

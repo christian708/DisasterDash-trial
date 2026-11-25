@@ -20,6 +20,12 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField] private float shakeMagnitude = 0.08f;
     [SerializeField] private float shakeDuration = 0.25f;
 
+    [Header("Heal Feedback")]
+    [SerializeField] private Color healGlowColor = new Color(0.3f, 1f, 0.4f, 1f);
+    [SerializeField] private int healPulseCount = 3;
+    [SerializeField] private float healPulseDuration = 0.12f;
+    [SerializeField] private ParticleSystem healParticles; // optional
+
     [Header("Knockback")]
     [SerializeField] private float knockbackForce = 3f;
 
@@ -27,6 +33,7 @@ public class PlayerHealth : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     private Color originalColor;
     private Vector3 originalLocalPosition;
+    private Coroutine healRoutine;
 
     private int currentHearts;
     private float lastDamageTime = -999f;
@@ -40,7 +47,10 @@ public class PlayerHealth : MonoBehaviour
 
     void Start()
     {
-        currentHearts = maxHearts;
+        currentHearts = (HealthCarry.savedHealth >= 0)
+            ? Mathf.Clamp(HealthCarry.savedHealth, 1, maxHearts)
+            : maxHearts;
+
         UpdateHeartsUI();
     }
 
@@ -71,8 +81,13 @@ public class PlayerHealth : MonoBehaviour
         currentHearts = Mathf.Max(currentHearts - amount, 0);
         lastDamageTime = Time.time;
         UpdateHeartsUI();
+        HealthCarry.savedHealth = currentHearts;
 
+        // Cancel any heal glow so the sprite doesn't get stuck green
         StopAllCoroutines();
+        healRoutine = null;
+        if (spriteRenderer != null) spriteRenderer.color = originalColor;
+
         StartCoroutine(DamageFeedbackRoutine());
 
         if (damageSourcePosition.HasValue && rb != null)
@@ -126,21 +141,65 @@ public class PlayerHealth : MonoBehaviour
 
     private void ApplyKnockback(Vector2 sourcePosition)
     {
-        // Horizontal-only push. A full normalized direction (including Y)
-        // used to be harmless because HandleMovement overwrote the whole
-        // velocity vector every frame - now that Y is left alone for
-        // gravity to work, a vertical knockback component would linger
-        // and fight with gravity (slow sink/float). Keep it purely sideways.
+        // Horizontal-only push so it doesn't fight gravity.
         float directionX = Mathf.Sign(transform.position.x - sourcePosition.x);
-        if (directionX == 0f) directionX = 1f; // avoid a zero-force edge case if positions match exactly
+        if (directionX == 0f) directionX = 1f;
 
         rb.AddForce(new Vector2(directionX, 0f) * knockbackForce, ForceMode2D.Impulse);
     }
 
-    public void Heal(int amount = 1)
+    // Returns false (and does nothing) if already at full hearts.
+    // Used by the potion so it is only consumed when it can actually heal.
+    public bool TryHeal(int amount = 1)
     {
+        if (currentHearts <= 0) return false;
+        if (currentHearts >= maxHearts) return false;
+
         currentHearts = Mathf.Min(currentHearts + amount, maxHearts);
         UpdateHeartsUI();
+        HealthCarry.savedHealth = currentHearts;
+
+        PlayHealEffect();
+        return true;
+    }
+
+    public void Heal(int amount = 1)
+    {
+        TryHeal(amount);
+    }
+
+    public bool IsFullHealth() => currentHearts >= maxHearts;
+
+    private void PlayHealEffect()
+    {
+        if (spriteRenderer == null || !spriteRenderer.gameObject.activeInHierarchy)
+        {
+            FindActiveSprite();
+        }
+
+        if (healParticles != null)
+        {
+            healParticles.Play();
+        }
+
+        if (healRoutine != null) StopCoroutine(healRoutine);
+        healRoutine = StartCoroutine(HealGlowRoutine());
+    }
+
+    private IEnumerator HealGlowRoutine()
+    {
+        if (spriteRenderer == null) yield break;
+
+        for (int i = 0; i < healPulseCount; i++)
+        {
+            spriteRenderer.color = healGlowColor;
+            yield return new WaitForSeconds(healPulseDuration);
+            spriteRenderer.color = originalColor;
+            yield return new WaitForSeconds(healPulseDuration);
+        }
+
+        spriteRenderer.color = originalColor;
+        healRoutine = null;
     }
 
     private void UpdateHeartsUI()
@@ -154,6 +213,9 @@ public class PlayerHealth : MonoBehaviour
     private void Die()
     {
         Debug.Log("Player died!");
+
+        // Retry starts with full hearts
+        HealthCarry.Reset();
 
         if (DeathController.Instance != null)
         {

@@ -395,8 +395,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 5, y: 110}
-  m_SizeDelta: {x: 1000, y: 100}
+  m_AnchoredPosition: {x: 0.000014305, y: 55}
+  m_SizeDelta: {x: 800, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1075173186
 MonoBehaviour:
@@ -539,9 +539,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2027591645}
-  - component: {fileID: 2027591646}
   - component: {fileID: 2027591648}
   - component: {fileID: 2027591647}
+  - component: {fileID: 2027591649}
   m_Layer: 5
   m_Name: Storypor
   m_TagString: Untagged
@@ -568,23 +568,6 @@ RectTransform:
   m_AnchoredPosition: {x: -0.00071716, y: 0.000030518}
   m_SizeDelta: {x: 2092.3, y: 991.08}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2027591646
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2027591644}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea1ac6ff086c3fd4cacff90a301cb1a8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::StoryTu
-  storyImage: {fileID: 2027591647}
-  boySlide1: {fileID: -6104754325865124060, guid: 48beb65d055dde849a6a0710be5a678a, type: 3}
-  girlSlide1: {fileID: 6219594363198822212, guid: 657d13d1dde46f14180d182c04a77ece, type: 3}
-  sharedSlide2: {fileID: -3731309134862905131, guid: 38284ae975dbd8e4da4d3b4b4ed8d7a2, type: 3}
-  nextSceneName: LevelMenu
 --- !u!114 &2027591647
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -623,6 +606,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2027591644}
   m_CullTransparentMesh: 1
+--- !u!114 &2027591649
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2027591644}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 236ff10f4686b44488d84ba6afb9edc4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::StoryWan
+  storyImage: {fileID: 2027591647}
+  boySlides:
+  - {fileID: -6104754325865124060, guid: 48beb65d055dde849a6a0710be5a678a, type: 3}
+  - {fileID: -3731309134862905131, guid: 38284ae975dbd8e4da4d3b4b4ed8d7a2, type: 3}
+  - {fileID: 8680785154591354588, guid: 632b394207e11274d86843e4ed4d3cc9, type: 3}
+  girlSlides:
+  - {fileID: 6219594363198822212, guid: 657d13d1dde46f14180d182c04a77ece, type: 3}
+  - {fileID: -3731309134862905131, guid: 38284ae975dbd8e4da4d3b4b4ed8d7a2, type: 3}
+  - {fileID: 2786872273841377014, guid: 81fde521b1519314a9507cb9b9b28de4, type: 3}
+  nextSceneName: LevelMenu
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

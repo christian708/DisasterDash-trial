@@ -3,12 +3,16 @@ using UnityEngine;
 public class BoulderDropZone : MonoBehaviour
 {
     [SerializeField] private BoulderHazard boulder;
-    private bool triggered = false;
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (triggered || !other.CompareTag("Player")) return;
-        triggered = true;
+        if (!other.CompareTag("Player")) return;
+        if (boulder == null) return;
+
+        // Still falling, resting or crumbling: wait until it's gone.
+        if (boulder.IsDropping) return;
+
+        boulder.ResetBoulder(); // back to its start position, visible again
         boulder.Drop();
     }
 }

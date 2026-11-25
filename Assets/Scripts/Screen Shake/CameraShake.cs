@@ -41,13 +41,15 @@ public class CameraShake : MonoBehaviour
         seedRot = Random.Range(0f, 100f);
     }
 
+    private bool wasShakinLastFrame = false;
+
     private void Update()
     {
         if (trauma > 0f)
         {
             trauma = Mathf.Clamp01(trauma - traumaDecaySpeed * Time.deltaTime);
 
-            float shakeAmount = trauma * trauma; // squared for punchier falloff
+            float shakeAmount = trauma * trauma;
 
             float offsetX = maxOffset * shakeAmount * (Mathf.PerlinNoise(seedX, Time.time * noiseFrequency) * 2f - 1f);
             float offsetY = maxOffset * shakeAmount * (Mathf.PerlinNoise(seedY, Time.time * noiseFrequency) * 2f - 1f);
@@ -55,28 +57,42 @@ public class CameraShake : MonoBehaviour
 
             ShakeOffset = new Vector3(offsetX, offsetY, 0f);
             transform.localRotation = Quaternion.Euler(0f, 0f, roll);
+
+            wasShakinLastFrame = true;
         }
         else
         {
+            // Trauma hit zero — stop sound exactly once
+            if (wasShakinLastFrame)
+            {
+                AudioManager.Instance?.StopLoopingSFX();
+                wasShakinLastFrame = false;
+            }
+
             ShakeOffset = Vector3.zero;
             transform.localRotation = Quaternion.identity;
         }
     }
 
-    /// <summary>Adds trauma (0-1). Call this once when the earthquake phase starts,
-    /// or repeatedly for a sustained/escalating shake.</summary>
     public void AddTrauma(float amount)
     {
+        bool wasShaking = trauma > 0f;
         trauma = Mathf.Clamp01(trauma + amount);
+
+        // Only start the sound once when shake begins, not on every AddTrauma call
+        if (!wasShaking && trauma > 0f)
+            AudioManager.Instance?.PlayLoopingSFX("earthquake");
     }
+
+    public bool IsShaking => trauma > 0f;
 
     /// <summary>Instantly stops shaking, e.g. when the earthquake phase ends early.</summary>
     public void StopShake()
     {
         trauma = 0f;
+        wasShakinLastFrame = false;
         ShakeOffset = Vector3.zero;
         transform.localRotation = Quaternion.identity;
+        AudioManager.Instance?.StopLoopingSFX();
     }
-
-    public bool IsShaking => trauma > 0f;
 }

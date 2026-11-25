@@ -1,0 +1,624 @@
+fileFormatVersion: 2
+guid: b2ecb2c5e902c734ca4ed82b9c80b25a
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4212176022684134364
+    second: PULL_0
+  - first:
+      213: 695478145852019968
+    second: PULL_1
+  - first:
+      213: -3350213913633845240
+    second: PULL_2
+  - first:
+      213: -2604230602468764456
+    second: PULL_3
+  - first:
+      213: 4155677767448963230
+    second: PULL_4
+  - first:
+      213: 711154775110213163
+    second: PULL_5
+  - first:
+      213: -2619548195408246089
+    second: PULL_6
+  - first:
+      213: -6645822873540956953
+    second: PULL_7
+  - first:
+      213: -6135710912767427994
+    second: PULL_8
+  - first:
+      213: 919595481715893625
+    second: PULL_9
+  - first:
+      213: -1669710020500210424
+    second: PULL_10
+  - first:
+      213: 2967369879075970081
+    second: PULL_11
+  - first:
+      213: -6400148113512021245
+    second: PULL_12
+  - first:
+      213: -2366263050545391437
+    second: PULL_13
+  - first:
+      213: 6228929497692038154
+    second: PULL_14
+  - first:
+      213: -8347041144451164755
+    second: PULL_15
+  - first:
+      213: 5102661651418217510
+    second: PULL_16
+  - first:
+      213: 601652818401100540
+    second: PULL_17
+  - first:
+      213: 3073275866074145476
+    second: PULL_18
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: PULL_0
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 711
+        width: 239
+        height: 283
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4249e7479385b85c0800000000000000
+      internalID: -4212176022684134364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PULL_1
+      rect:
+        serializedVersion: 2
+        x: 522
+        y: 711
+        width: 242
+        height: 283
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0059e8850b5d6a900800000000000000
+      internalID: 695478145852019968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PULL_2
+      rect:
+        serializedVersion: 2
+        x: 868
+        y: 713
+        width: 243
+        height: 281
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 800984c1236a181d0800000000000000
+      internalID: -3350213913633845240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PULL_3
+      rect:
+        serializedVersion: 2
+        x: 1208
+        y: 713
+        width: 304
+        height: 281
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d4d5aa901aebdbd0800000000000000
+      internalID: -2604230602468764456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PULL_4
+      rect:
+        serializedVersion: 2
+        x: 1558
+        y: 851
+        width: 237
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e98a8c969eeeba930800000000000000
+      internalID: 4155677767448963230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PULL_5
+      rect:
+        serializedVersion: 2
+        x: 1555
+        y: 712
+        width: 267
+        height: 136
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2e54c600878ed900800000000000000
+      internalID: 711154775110213163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PULL_6
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 565
+        width: 268
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ba0da49bce75abd0800000000000000
+      internalID: -2619548195408246089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PULL_7
+      rect:
+        serializedVersion: 2
+        x: 521
+        y: 420
+        width: 319
+        height: 151
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ecec6ebe4b45c3a0800000000000000
+      internalID: -6645822873540956953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PULL_8
+      rect:
+        serializedVersion: 2
+        x: 522
+        y: 570
+        width: 273
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66a7208ee6399daa0800000000000000
+      internalID: -6135710912767427994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PULL_9
+      rect:
+        serializedVersion: 2
+        x: 866
+        y: 568
+        width: 282
+        height: 135
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 975eab8e73f03cc00800000000000000
+      internalID: 919595481715893625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PULL_10
+      rect:
+        serializedVersion: 2
+        x: 1208
+        y: 566
+        width: 291
+        height: 138
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80dbc26359ff3d8e0800000000000000
+      internalID: -1669710020500210424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PULL_11
+      rect:
+        serializedVersion: 2
+        x: 1553
+        y: 566
+        width: 307
+        height: 138
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12c5487ee273e2920800000000000000
+      internalID: 2967369879075970081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PULL_12
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 420
+        width: 316
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 303ca30433b1e27a0800000000000000
+      internalID: -6400148113512021245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PULL_13
+      rect:
+        serializedVersion: 2
+        x: 861
+        y: 420
+        width: 235
+        height: 135
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b81c13ea48592fd0800000000000000
+      internalID: -2366263050545391437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PULL_14
+      rect:
+        serializedVersion: 2
+        x: 1077
+        y: 462
+        width: 107
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a04e2e8306a917650800000000000000
+      internalID: 6228929497692038154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PULL_15
+      rect:
+        serializedVersion: 2
+        x: 1204
+        y: 420
+        width: 235
+        height: 135
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da51b6bbd4a592c80800000000000000
+      internalID: -8347041144451164755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PULL_16
+      rect:
+        serializedVersion: 2
+        x: 1430
+        y: 465
+        width: 98
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62c7ac5acbb40d640800000000000000
+      internalID: 5102661651418217510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PULL_17
+      rect:
+        serializedVersion: 2
+        x: 1546
+        y: 420
+        width: 234
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf209e6fc00895800800000000000000
+      internalID: 601652818401100540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PULL_18
+      rect:
+        serializedVersion: 2
+        x: 1771
+        y: 467
+        width: 89
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c261260e1876aa20800000000000000
+      internalID: 3073275866074145476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      PULL_0: -4212176022684134364
+      PULL_1: 695478145852019968
+      PULL_10: -1669710020500210424
+      PULL_11: 2967369879075970081
+      PULL_12: -6400148113512021245
+      PULL_13: -2366263050545391437
+      PULL_14: 6228929497692038154
+      PULL_15: -8347041144451164755
+      PULL_16: 5102661651418217510
+      PULL_17: 601652818401100540
+      PULL_18: 3073275866074145476
+      PULL_2: -3350213913633845240
+      PULL_3: -2604230602468764456
+      PULL_4: 4155677767448963230
+      PULL_5: 711154775110213163
+      PULL_6: -2619548195408246089
+      PULL_7: -6645822873540956953
+      PULL_8: -6135710912767427994
+      PULL_9: 919595481715893625
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

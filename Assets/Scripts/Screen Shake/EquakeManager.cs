@@ -48,13 +48,20 @@ public class EquakeManager : MonoBehaviour
     private bool isRunning = true;
     private bool debrisPhaseActive = false;
     private Coroutine loopRoutine;
+    private Camera mainCamera;
 
     // Safe, inactive copies of the debris that we clone from.
     // These can never be destroyed by the debris scripts themselves.
     private GameObject[] templates = new GameObject[0];
 
+    // Shoes protect from the shake. Asks the inventory directly, so it works
+    // no matter how many other wearables are equipped.
+    private bool HasShoes =>
+        InventoryManager.Instance != null && InventoryManager.Instance.IsEquipped("shoe");
+
     private void Awake()
     {
+        mainCamera = Camera.main;
         BuildTemplates();
     }
 
@@ -127,7 +134,7 @@ public class EquakeManager : MonoBehaviour
             CameraShake.instance.AddTrauma(shakeTrauma);
 
 #if UNITY_EDITOR
-        Debug.Log($"[Equake] Shake started. Equipped id = '{(InventoryManager.Instance != null ? InventoryManager.Instance.EquippedItemId : "NO INVENTORY MANAGER")}', HasShoes = {EarthquakeState.HasShoes}");
+        Debug.Log($"[Equake] Shake started. HasShoes = {HasShoes}");
 #endif
 
         float elapsed = 0f;
@@ -135,15 +142,13 @@ public class EquakeManager : MonoBehaviour
 
         while (elapsed < shakeDuration && isRunning)
         {
-            // Keep the shake sustained across the whole phase
             if (CameraShake.instance != null && !CameraShake.instance.IsShaking)
                 CameraShake.instance.AddTrauma(shakeTrauma);
 
             if (playerController != null)
             {
-                if (EarthquakeState.HasShoes)
+                if (HasShoes)
                 {
-                    // Shoes: no damage, just slowed
                     playerController.SetSpeedMultiplier(shoeSlowMultiplier);
                 }
                 else
@@ -169,7 +174,9 @@ public class EquakeManager : MonoBehaviour
 
         if (CameraShake.instance != null)
             CameraShake.instance.StopShake();
-    }
+
+        // Stop earthquake rumble when shake ends
+        AudioManager.Instance?.StopLoopingSFX();    }
 
     private IEnumerator FallingDebrisPhase()
     {
@@ -236,10 +243,9 @@ public class EquakeManager : MonoBehaviour
 
     private bool IsBelowCamera(Vector3 pos)
     {
-        Camera cam = Camera.main;
-        if (cam == null) return false;
-
-        float bottom = cam.transform.position.y - cam.orthographicSize - offScreenMargin;
+        if (mainCamera == null) mainCamera = Camera.main;
+        if (mainCamera == null) return false;
+        float bottom = mainCamera.transform.position.y - mainCamera.orthographicSize - offScreenMargin;
         return pos.y < bottom;
     }
 
@@ -250,5 +256,6 @@ public class EquakeManager : MonoBehaviour
         if (loopRoutine != null) StopCoroutine(loopRoutine);
         if (CameraShake.instance != null) CameraShake.instance.StopShake();
         if (playerController != null) playerController.SetSpeedMultiplier(1f);
+        AudioManager.Instance?.StopLoopingSFX();
     }
 }

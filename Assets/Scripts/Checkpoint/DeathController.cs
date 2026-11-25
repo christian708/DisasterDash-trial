@@ -53,6 +53,9 @@ public class DeathController : MonoBehaviour
     {
         yield return new WaitForSeconds(respawnDelay);
 
+        // Always restart with full hearts on respawn
+        HealthCarry.Reset();
+
         SceneManager.sceneLoaded += OnSceneLoaded;
 
         string sceneToLoad = (CheckpointManager.Instance != null && CheckpointManager.Instance.HasCheckpoint)

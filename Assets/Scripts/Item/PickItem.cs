@@ -17,13 +17,39 @@ public class PickItem : MonoBehaviour, IInteractable
     [Tooltip("Check this for passive equip-and-hold items with no UseTarget (e.g. shoes slowing earthquake penalty) - unlocks in the bag immediately on pickup instead of waiting for a target to be resolved.")]
     public bool unlocksOnPickup = false;
 
+    [Tooltip("Check this for wearables like the raincoat and boots - marks the item as equipped in InventoryManager on pickup (Wind.cs and FloodSurge.cs read this).")]
+    public bool equipOnPickup = false;
+
     public void OnPickUp()
     {
-        PlayerHeldItem.Instance.PickUp(itemId, itemName, requiredTargetTag);
-
-        if (unlocksOnPickup)
+        if (PlayerHeldItem.Instance != null)
         {
-            InventoryManager.Instance.AddItem(itemId, itemName);
+            PlayerHeldItem.Instance.PickUp(itemId, itemName, requiredTargetTag);
+        }
+        else
+        {
+            Debug.LogWarning("[PickItem] PlayerHeldItem.Instance is null - add PlayerHeldItem to the Player in this scene.");
+        }
+
+        // Play the pickup sound if an ElementSoundPlayer is attached
+        ElementSoundPlayer esp = GetComponent<ElementSoundPlayer>();
+        if (esp != null) esp.PlayStartSound();
+
+        if (InventoryManager.Instance != null)
+        {
+            if (unlocksOnPickup)
+            {
+                InventoryManager.Instance.AddItem(itemId, itemName);
+            }
+
+            if (equipOnPickup)
+            {
+                InventoryManager.Instance.SetEquippedItem(itemId, itemName, requiredTargetTag);
+            }
+        }
+        else
+        {
+            Debug.LogWarning("[PickItem] InventoryManager.Instance is null - start the game from the Main scene.");
         }
 
         gameObject.SetActive(false);

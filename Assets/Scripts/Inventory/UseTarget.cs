@@ -1,11 +1,6 @@
 using UnityEngine;
 using System.Collections;
 
-/// <summary>
-/// Attach to anything a held item can be used on (a fire, a spill, etc.).
-/// Each target has exactly ONE specific item that resolves it - set
-/// requiredItemId to match the itemId of the PickableItem that should work here.
-/// </summary>
 public class UseTarget : MonoBehaviour, IInteractable
 {
     [Tooltip("The one specific itemId that resolves this target, e.g. 'fire_extinguisher'")]
@@ -17,50 +12,60 @@ public class UseTarget : MonoBehaviour, IInteractable
     [Tooltip("What actually gets deactivated when resolved. Leave empty to deactivate this object itself; assign the parent Fire object if UseTarget sits on a separate wider-range child.")]
     public GameObject objectToDeactivate;
 
-    [Header("Relight (optional)")]
-    [Tooltip("How many times this target can relight after being resolved. 0 = never relights (stays resolved permanently). e.g. 3 means it can flare back up 3 times, then stays out for good on the 4th extinguish.")]
-    public int maxRelights = 0;
-    [Tooltip("Seconds before the target comes back, each time it relights.")]
-    public float relightDelay = 5f;
+    [Header("Player Animation")]
+    [Tooltip("Animator trigger fired on the player when used, e.g. BoyEx or Tow")]
+    public string playerAnimTrigger = "BoyEx";
 
-    [Tooltip("Optional popup shown when this target relights (e.g. TipPopup_Extinguisher). Leave empty for no popup.")]
+    [Header("Sound")]
+    [Tooltip("SFX ID played from AudioManager when this target is resolved (e.g. 'fire_extinguish', 'fire_pour').")]
+    public string resolveSoundId = "";
+
+    [Header("Relight (optional)")]
+    public int maxRelights = 0;
+    public float relightDelay = 5f;
     public GameObject relightPopup;
 
     private int timesRelit = 0;
 
-    public void OnPickUp()
-    {
-        // Targets aren't picked up.
-    }
+    public void OnPickUp() { }
 
     public void OnUse()
     {
+        if (PlayerHeldItem.Instance == null) return;
         if (!PlayerHeldItem.Instance.IsHoldingItem) return;
         if (PlayerHeldItem.Instance.HeldItemId != requiredItemId) return;
 
         Animator playerAnimator = PlayerHeldItem.Instance.GetComponentInChildren<Animator>();
-        if (playerAnimator != null)
+        if (playerAnimator != null && !string.IsNullOrEmpty(playerAnimTrigger))
         {
-            playerAnimator.SetTrigger("BoyEx");
+            playerAnimator.SetTrigger(playerAnimTrigger);
         }
 
         GameObject target = objectToDeactivate != null ? objectToDeactivate : gameObject;
+
+        // Play resolve sound (fire_extinguish, fire_pour, etc.)
+        if (!string.IsNullOrEmpty(resolveSoundId))
+            AudioManager.Instance?.PlaySFX(resolveSoundId);
 
         if (resolveEffectPrefab != null)
         {
             Instantiate(resolveEffectPrefab, target.transform.position, Quaternion.identity);
         }
 
-        InventoryManager.Instance.AddItem(PlayerHeldItem.Instance.HeldItemId, PlayerHeldItem.Instance.HeldItemName);
-        InventoryNotificationUI.Instance.ShowMessage($"{PlayerHeldItem.Instance.HeldItemName} added to inventory!");
+        string itemId = PlayerHeldItem.Instance.HeldItemId;
+        string itemName = PlayerHeldItem.Instance.HeldItemName;
+
+        if (InventoryManager.Instance != null)
+            InventoryManager.Instance.AddItem(itemId, itemName);
+
+        if (InventoryNotificationUI.Instance != null)
+            InventoryNotificationUI.Instance.ShowMessage($"{itemName} added to inventory!");
 
         target.SetActive(false);
 
-        if (timesRelit < maxRelights)
+        if (timesRelit < maxRelights && CoroutineRunner.Instance != null)
         {
             timesRelit++;
-            // Runs on a separate always-active object so the timer survives
-            // this target's GameObject being turned off.
             CoroutineRunner.Instance.StartCoroutine(RelightAfterDelay(target));
         }
     }

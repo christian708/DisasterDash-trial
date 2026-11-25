@@ -242,8 +242,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 96.25379, y: -318.73096}
-  m_SizeDelta: {x: 152.50758, y: 380.6927}
+  m_AnchoredPosition: {x: 171.15672, y: -241.9852}
+  m_SizeDelta: {x: 302.31345, y: 283.86398}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7503131502465686043
 CanvasRenderer:
@@ -502,8 +502,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 96.25379, y: -100.99932}
-  m_SizeDelta: {x: 192.50758, y: 201.99864}
+  m_AnchoredPosition: {x: 171.15672, y: -100.74514}
+  m_SizeDelta: {x: 342.31345, y: 201.49028}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5179515394708041620
 CanvasRenderer:
@@ -576,6 +576,8 @@ GameObject:
   - component: {fileID: 1487062582172655202}
   - component: {fileID: 5034326386842835292}
   - component: {fileID: 6536404825219827400}
+  - component: {fileID: 9081599559384676958}
+  - component: {fileID: 1114835503666435536}
   m_Layer: 5
   m_Name: Back
   m_TagString: Untagged
@@ -684,7 +686,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6536404825219827400}
+      - m_Target: {fileID: 9081599559384676958}
         m_TargetAssemblyTypeName: InvSceneNav, Assembly-CSharp
         m_MethodName: CloseBag
         m_Mode: 1
@@ -710,6 +712,32 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::InvSceneNav
   bagPanel: {fileID: 834672100101682886}
   settingsSceneName: Settings
+--- !u!114 &9081599559384676958
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5136630565876110821}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf75111d27f07054785b60eed0bb6fa7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InvSceneNav
+  bagPanel: {fileID: 834672100101682886}
+  settingsSceneName: Settings
+--- !u!114 &1114835503666435536
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5136630565876110821}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 025e860e31e62bf448afdfad1e08a90e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UIButtonSound
 --- !u!1 &5565960393074097902
 GameObject:
   m_ObjectHideFlags: 0
@@ -748,8 +776,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1796.0177, y: -395.53796}
-  m_SizeDelta: {x: 192.50758, y: 751.0759}
+  m_AnchoredPosition: {x: 2024.9402, y: -332.70374}
+  m_SizeDelta: {x: 342.31345, y: 625.4075}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5281074062098466664
 CanvasRenderer:
@@ -873,8 +901,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1071.1357, y: -545.53796}
-  m_SizeDelta: {x: 1942.2715, y: 791.0759}
+  m_AnchoredPosition: {x: 1223.0485, y: -482.70374}
+  m_SizeDelta: {x: 2246.097, y: 665.4075}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2003036931337361943
 CanvasRenderer:
@@ -1101,8 +1129,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 96.25379, y: -481.5373}
-  m_SizeDelta: {x: 192.50758, y: 539.07733}
+  m_AnchoredPosition: {x: 171.15672, y: -418.44888}
+  m_SizeDelta: {x: 342.31345, y: 413.9172}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3491461140454933605
 CanvasRenderer:
@@ -1200,6 +1228,7 @@ GameObject:
   - component: {fileID: 909302181988794782}
   - component: {fileID: 4329272010176215373}
   - component: {fileID: 5878608496094153242}
+  - component: {fileID: 3455801428611964807}
   m_Layer: 5
   m_Name: Equip
   m_TagString: Untagged
@@ -1308,6 +1337,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &3455801428611964807
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7104603176573628246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 025e860e31e62bf448afdfad1e08a90e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UIButtonSound
 --- !u!1 &7978467862997952051
 GameObject:
   m_ObjectHideFlags: 0
@@ -1343,8 +1384,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 96.25379, y: -30}
-  m_SizeDelta: {x: 152.50758, y: 98.38463}
+  m_AnchoredPosition: {x: 171.15672, y: -30}
+  m_SizeDelta: {x: 302.31345, y: 70.0532}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!222 &2565559729610368453
 CanvasRenderer:
@@ -1502,8 +1543,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 869.88196, y: -395.53796}
-  m_SizeDelta: {x: 1639.7639, y: 751.0759}
+  m_AnchoredPosition: {x: 946.8917, y: -332.70374}
+  m_SizeDelta: {x: 1793.7834, y: 625.4075}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6954003100979248090
 CanvasRenderer:
@@ -1648,6 +1689,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5191519264263498750}
   - component: {fileID: 8948242753372618185}
+  - component: {fileID: 8063164351974978907}
   m_Layer: 5
   m_Name: UIButtons
   m_TagString: Untagged
@@ -1690,6 +1732,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::InvSceneNav
   bagPanel: {fileID: 834672100101682886}
   settingsSceneName: 
+--- !u!114 &8063164351974978907
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8857830600739385364}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf75111d27f07054785b60eed0bb6fa7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InvSceneNav
+  bagPanel: {fileID: 834672100101682886}
+  settingsSceneName: Settings
 --- !u!1001 &1084463701192665337
 PrefabInstance:
   m_ObjectHideFlags: 0

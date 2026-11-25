@@ -27,7 +27,12 @@ public class StoryPopup : MonoBehaviour
         index++;
         if (index >= slides.Length)
         {
-            gameObject.SetActive(false);
+            // Deactivate the whole parent panel so all children (Tap, Image) hide together
+            if (transform.parent != null)
+                transform.parent.gameObject.SetActive(false);
+            else
+                gameObject.SetActive(false);
+
             onFinished.Invoke();
             return;
         }

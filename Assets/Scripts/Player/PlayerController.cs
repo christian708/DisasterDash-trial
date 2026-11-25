@@ -6,8 +6,10 @@ public class PlayerController : MonoBehaviour
     private Animator animator;
     private Rigidbody2D rb;
     private SpriteRenderer spriteRenderer;
+    private Collider2D col;
 
     [SerializeField] private float moveSpeed = 5f;
+    [SerializeField] private float crouchSpeedMultiplier = 0.5f;
 
     private Vector2 moveInput;
 
@@ -17,9 +19,24 @@ public class PlayerController : MonoBehaviour
     // 1 = normal speed, 0.5 = half speed, etc. Reset to 1 on trigger exit.
     private float speedMultiplier = 1f;
 
+    // Constant horizontal push from wind (+ = right, - = left). Reset to 0 on exit.
+    private float windPush = 0f;
+
+    // Crouch (set automatically by CrouchZone)
+    private bool isCrouching = false;
+    private Vector2 normalColSize;
+    private Vector2 normalColOffset;
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        col = GetComponent<Collider2D>();
+
+        if (col is BoxCollider2D box)
+        {
+            normalColSize = box.size;
+            normalColOffset = box.offset;
+        }
 
         FindActiveCharacter();
     }
@@ -65,10 +82,6 @@ public class PlayerController : MonoBehaviour
         }
 
         // MOBILE CONTROLS
-        bool mobileMoving =
-            MobileButton.MoveLeft ||
-            MobileButton.MoveRight;
-
         if (MobileButton.MoveLeft)
         {
             moveInput = Vector2.left;
@@ -96,7 +109,18 @@ public class PlayerController : MonoBehaviour
 
     private void HandleMovement()
     {
-        rb.linearVelocity = new Vector2(moveInput.x * moveSpeed * speedMultiplier, rb.linearVelocity.y);
+        float crouchMult = isCrouching ? crouchSpeedMultiplier : 1f;
+
+        float inputX = moveInput.x;
+
+        // Wind pushing left  -> block moving right (against the wind)
+        // Wind pushing right -> block moving left
+        if (windPush < 0f && inputX > 0f) inputX = 0f;
+        else if (windPush > 0f && inputX < 0f) inputX = 0f;
+
+        rb.linearVelocity = new Vector2(
+            inputX * moveSpeed * speedMultiplier * crouchMult + windPush,
+            rb.linearVelocity.y);
 
         if (spriteRenderer != null)
         {
@@ -111,6 +135,8 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    private bool wasMoving = false;
+
     private void HandleAnimation()
     {
         if (animator == null)
@@ -119,13 +145,54 @@ public class PlayerController : MonoBehaviour
         bool isMoving = moveInput.sqrMagnitude > 0.01f;
 
         animator.SetBool("IsRunning", isMoving);
+        animator.SetBool("IsCrouching", isCrouching);
+
+        // Only call AudioManager on state change, not every frame
+        if (isMoving != wasMoving)
+        {
+            wasMoving = isMoving;
+            if (isMoving)
+                AudioManager.Instance?.PlayRunSound();
+            else
+                AudioManager.Instance?.StopRunSound();
+        }
     }
 
     /// <summary>Whether the player currently has movement input.</summary>
     public bool IsMoving => moveInput.sqrMagnitude > 0.01f;
 
+    /// <summary>Whether the player is currently crouched (under a table).</summary>
+    public bool IsCrouching => isCrouching;
+
     /// <summary>
-    /// Call from hazards like WindGust/FloodOverlay to temporarily change speed.
+    /// Called by CrouchZone when the player enters/exits a crouch area.
+    /// Shrinks the collider and drives the IsCrouching animator bool.
+    /// </summary>
+    public void SetCrouch(bool crouch)
+    {
+        if (isCrouching == crouch) return;
+        isCrouching = crouch;
+
+        if (col is BoxCollider2D box)
+        {
+            if (crouch)
+            {
+                float newH = normalColSize.y * 0.5f;
+                box.size = new Vector2(normalColSize.x, newH);
+                box.offset = new Vector2(
+                    normalColOffset.x,
+                    normalColOffset.y - (normalColSize.y - newH) / 2f);
+            }
+            else
+            {
+                box.size = normalColSize;
+                box.offset = normalColOffset;
+            }
+        }
+    }
+
+    /// <summary>
+    /// Call from hazards like wind/flood to temporarily change speed.
     /// 1 = normal, 0.5 = half speed. Call again with 1 to reset (e.g. on trigger exit).
     /// </summary>
     public void SetSpeedMultiplier(float multiplier)
@@ -134,13 +201,19 @@ public class PlayerController : MonoBehaviour
     }
 
     /// <summary>
-    /// Sets moveSpeed directly to an absolute value (used by Wind.cs).
-    /// Note: this is a separate mechanism from SetSpeedMultiplier - avoid
-    /// combining wind and flood/other multiplier-based hazards at the same
-    /// time on the same player, since they'd fight over the same speed value.
+    /// Sets moveSpeed directly to an absolute value. Kept for compatibility.
     /// </summary>
     public void SetSpeed(float newSpeed)
     {
         moveSpeed = newSpeed;
+    }
+
+    /// <summary>
+    /// Constant horizontal push from wind. Negative = pushed left, 0 = no push.
+    /// While non-zero, input against the wind direction is blocked.
+    /// </summary>
+    public void SetWindPush(float push)
+    {
+        windPush = push;
     }
 }

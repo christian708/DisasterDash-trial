@@ -81,11 +81,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ad69a9dd62de8e4b991ecd469351b88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UseTarget
-  requiredItemId: bucket
+  requiredItemId: towel
   resolveEffectPrefab: {fileID: 477831175357753837, guid: 952e2132c911d4348bd8105dac56a00a, type: 3}
   objectToDeactivate: {fileID: 5217872124660295751}
-  canRelight: 0
+  playerAnimTrigger: Tow
+  maxRelights: 0
   relightDelay: 5
+  relightPopup: {fileID: 0}
 --- !u!1 &5217872124660295751
 GameObject:
   m_ObjectHideFlags: 0

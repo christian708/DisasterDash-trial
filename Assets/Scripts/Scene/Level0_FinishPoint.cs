@@ -7,6 +7,7 @@ public class Level0FinishPoint : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
+            AudioManager.Instance?.PlaySFX("finish");
             SceneManager.LoadScene("Level0_Fire_Interior");
         }
     }

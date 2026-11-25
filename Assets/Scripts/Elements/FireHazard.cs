@@ -9,6 +9,12 @@ public class FireHazard : MonoBehaviour
     private float lastDamageTime = -999f;
     private PlayerHealth playerHealth;
 
+    private void OnEnable()
+    {
+        if (gameObject.activeInHierarchy)
+            AudioManager.Instance?.PlaySFX("fire");
+    }
+
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
